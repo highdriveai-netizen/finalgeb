@@ -1,8 +1,8 @@
 export interface UniversityPhoto {
   id: string;
   title: string;
-  caption: string;
-  tag: string;
+  caption?: string;
+  tag?: string;
   url: string;
   fallbackUrl?: string;
 }
@@ -10,34 +10,30 @@ export interface UniversityPhoto {
 export const DEFAULT_UNIVERSITY_PHOTOS: UniversityPhoto[] = [
   {
     id: 'cu-photo-1',
-    title: 'CU Campus Main Gate & Entrance Arch',
-    tag: 'Iconic Landmark',
-    caption: 'The historic entrance arch of University of Chittagong flanked by lush natural foliage and tropical greenery.',
-    url: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80',
-    fallbackUrl: '/images/campus/campus-1.svg',
+    title: 'University Campus & Historic Landmark',
+    tag: 'University of Chittagong',
+    url: '/images/university/photo-1.jpg',
+    fallbackUrl: 'https://i.ibb.co/BHSqwkws/468590982-549717947860451-3217171050068955251-n.jpg',
   },
   {
     id: 'cu-photo-2',
-    title: 'Faculty of Biological Sciences & GEB Complex',
-    tag: 'Conference Venue',
-    caption: 'The academic hub hosting the Department of Genetic Engineering and Biotechnology and IBC 2027 scientific sessions.',
-    url: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80',
-    fallbackUrl: '/images/campus/campus-2.svg',
+    title: 'Academic Buildings & Faculty Complex',
+    tag: 'University of Chittagong',
+    url: '/images/university/photo-2.jpg',
+    fallbackUrl: 'https://i.ibb.co/wNrSgYTT/468505620-549717761193803-1409904802605620581-n.jpg',
   },
   {
     id: 'cu-photo-3',
-    title: 'Scenic Hill Country & Green Campus Roads',
-    tag: 'Natural Beauty',
-    caption: 'Renowned as one of South Asia’s most picturesque campuses with rolling verdant hills and winding forest paths.',
-    url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-    fallbackUrl: '/images/campus/campus-3.svg',
+    title: 'Green Hills & Campus Environment',
+    tag: 'Scenic Campus',
+    url: '/images/university/photo-3.jpg',
+    fallbackUrl: 'https://i.ibb.co/Ngrg6Kwd/534404336-732229146273204-2440829160426594022-n.jpg',
   },
   {
     id: 'cu-photo-4',
-    title: 'GEB Molecular Life Sciences Laboratories',
-    tag: 'Research Center',
-    caption: 'Cutting-edge genomic research, genetic engineering workstations, and tissue culture facilities in the GEB department.',
-    url: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
-    fallbackUrl: '/images/campus/campus-4.svg',
+    title: 'Department of GEB & Academic Life',
+    tag: 'Host Department',
+    url: '/images/university/photo-4.jpg',
+    fallbackUrl: 'https://i.ibb.co/Ps6c3dz1/535191570-732227456273373-8738900902760169434-n.jpg',
   },
 ];
