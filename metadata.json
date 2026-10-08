@@ -1,0 +1,6 @@
+{
+  "name": "International Biotechnology Conference 2027 (IBC 2027)",
+  "description": "Official website for the International Biotechnology Conference 2027 (IBC 2027) on 'Biotechnology for sustainable development', organized by Department of Genetic Engineering & Biotechnology (GEB), University of Chittagong, Bangladesh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
