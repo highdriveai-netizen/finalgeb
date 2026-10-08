@@ -162,8 +162,6 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <span>Courtesy: University Grants Commission (UGC), Bangladesh</span>
-            <span>·</span>
             <button
               onClick={scrollToTop}
               className="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition-colors"
