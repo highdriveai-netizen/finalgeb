@@ -196,13 +196,15 @@ export const Header: React.FC = () => {
 
             {/* Right: Primary Action Button (Submit Paper) */}
             <div className="hidden sm:flex items-center gap-3">
-              <Link
-                to="/submit-article"
+              <a
+                href="https://forms.gle/RzeqcFCeakhUFMVF8"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold text-white bg-slate-900 hover:bg-emerald-800 active:bg-emerald-950 rounded-lg shadow-xs transition-all duration-200 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
               >
                 <span>Submit Paper</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
+              </a>
             </div>
 
             {/* Mobile Menu Toggle Button */}
@@ -281,13 +283,15 @@ export const Header: React.FC = () => {
               </Link>
 
               <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-                <Link
-                  to="/submit-article"
+                <a
+                  href="https://forms.gle/RzeqcFCeakhUFMVF8"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-1.5 py-2.5 px-4 text-xs font-bold text-white bg-slate-900 rounded-lg shadow-xs"
                 >
                   <span>Submit Paper</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
-                </Link>
+                </a>
                 <Link
                   to="/register"
                   className="w-full flex items-center justify-center py-2 px-4 text-xs font-semibold text-emerald-800 bg-emerald-50 rounded-lg border border-emerald-200"
