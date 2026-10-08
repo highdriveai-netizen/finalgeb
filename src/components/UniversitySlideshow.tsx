@@ -49,18 +49,7 @@ export const UniversitySlideshow: React.FC = () => {
                 loading={index === 0 ? 'eager' : 'lazy'}
               />
 
-              {/* Gentle gradient overlay at bottom for subtle polish */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-
-              {/* Clean bottom caption badge */}
-              <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white/95 pointer-events-none">
-                <span className="text-xs sm:text-sm font-medium tracking-wide drop-shadow-md">
-                  {photo.title}
-                </span>
-                <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-black/40 backdrop-blur-xs text-white/90 border border-white/20">
-                  {index + 1} / {photos.length}
-                </span>
-              </div>
+              {/* Gentle subtle vignette if needed, without text overlays */}
             </div>
           );
         })}
