@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f3d2e"/>
+      <stop offset="50%" stop-color="#14532d"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky1)"/>
+  <circle cx="950" cy="200" r="140" fill="#22c55e" opacity="0.15" />
+  <path d="M0,600 Q300,500 600,560 T1200,540 L1200,800 L0,800 Z" fill="#064e3b" opacity="0.8"/>
+  <path d="M0,660 Q400,600 800,640 T1200,610 L1200,800 L0,800 Z" fill="#022c22"/>
+  <!-- Campus Entrance Arch Graphic -->
+  <path d="M420,700 L420,380 Q600,280 780,380 L780,700 L710,700 L710,410 Q600,340 490,410 L490,700 Z" fill="#f8fafc" opacity="0.9"/>
+  <rect x="400" y="380" width="400" height="40" rx="4" fill="#15803d" />
+  <text x="600" y="405" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle" letter-spacing="3">UNIVERSITY OF CHITTAGONG</text>
+  <text x="600" y="740" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="800" text-anchor="middle">Main Gate &amp; Campus Entrance</text>
+  <text x="600" y="770" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">Photo 1 of 4 • University of Chittagong</text>
+</svg>

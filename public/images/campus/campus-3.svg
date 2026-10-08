@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hills" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="40%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#hills)"/>
+  <!-- Layered rolling hills -->
+  <path d="M0,450 Q300,320 600,420 T1200,360 L1200,800 L0,800 Z" fill="#166534" opacity="0.9"/>
+  <path d="M0,520 Q400,430 850,530 T1200,480 L1200,800 L0,800 Z" fill="#14532d"/>
+  <path d="M0,620 Q500,560 950,650 T1200,600 L1200,800 L0,800 Z" fill="#052e16"/>
+  <!-- Winding road -->
+  <path d="M200,800 Q500,680 700,600 Q900,520 1000,500" stroke="#94a3b8" stroke-width="34" fill="none" opacity="0.6"/>
+  <text x="600" y="740" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="800" text-anchor="middle">Scenic Campus Hills &amp; Forest Roads</text>
+  <text x="600" y="770" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">Photo 3 of 4 • University of Chittagong</text>
+</svg>
