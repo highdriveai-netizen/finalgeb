@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center space-y-5">
           <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-emerald-800 flex items-center justify-center gap-2">
             <span className="w-6 h-0.5 bg-emerald-600 inline-block" />
-            <span>International Biotechnology Conference 2027</span>
+            <span>2ND INTERNATIONAL BIOTECHNOLOGY CONFERENCE 2027</span>
             <span className="w-6 h-0.5 bg-emerald-600 inline-block" />
           </div>
 
