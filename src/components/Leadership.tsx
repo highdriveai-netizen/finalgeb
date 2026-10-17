@@ -76,100 +76,113 @@ export const Leadership: React.FC = () => {
           </p>
         </div>
 
-        {/* 1. Chief Patron */}
-        <div className="space-y-6">
-          <div className="flex items-center gap-2 pb-3 border-b border-slate-200">
-            <Star className="w-5 h-5 text-emerald-700" />
-            <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-              Chief Patron
-            </h3>
-          </div>
-
-          <div className="max-w-xl mx-auto sm:mx-0">
-            <div className="group bg-gradient-to-b from-white to-slate-50/60 rounded-2xl p-6 sm:p-7 border border-emerald-900/15 shadow-sm hover:shadow-md hover:border-emerald-600/40 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-              {/* Photo Frame */}
-              <div className="relative shrink-0">
-                <div className="w-36 h-44 sm:w-40 sm:h-48 rounded-xl overflow-hidden bg-slate-100 border-2 border-emerald-700 shadow-md ring-4 ring-emerald-50 group-hover:ring-emerald-100 transition-all">
-                  <img
-                    src={chiefPatron.image}
-                    alt={chiefPatron.name}
-                    onError={(e) => {
-                      if (e.currentTarget.src !== chiefPatron.fallbackImage) {
-                        e.currentTarget.src = chiefPatron.fallbackImage;
-                      }
-                    }}
-                    className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-800 text-[10px] font-bold text-white uppercase tracking-wider shadow-xs whitespace-nowrap">
-                  Chief Patron
-                </div>
-              </div>
-
-              {/* Bio Details */}
-              <div className="text-center sm:text-left space-y-2 pt-2">
-                <h4 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight leading-snug">
-                  {chiefPatron.name}
-                </h4>
-                <div className="text-sm font-semibold text-emerald-800">
-                  {chiefPatron.role}
-                </div>
-                <div className="text-xs sm:text-sm text-slate-600">
-                  {chiefPatron.institution}
-                </div>
-              </div>
+        {/* Chief Patron & Patrons in the Same Line */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+          {/* Left Column: Chief Patron */}
+          <div className="lg:col-span-4 flex flex-col">
+            <div className="flex items-center gap-2 pb-3 mb-4 border-b border-slate-200">
+              <Star className="w-4 h-4 text-emerald-700" />
+              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
+                Chief Patron
+              </h3>
             </div>
-          </div>
-        </div>
 
-        {/* 2. Patrons */}
-        <div className="space-y-6">
-          <div className="flex items-center gap-2 pb-3 border-b border-slate-200">
-            <ShieldCheck className="w-5 h-5 text-emerald-700" />
-            <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-              Patrons
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {patrons.map((patron, idx) => (
-              <div
-                key={idx}
-                className="group bg-gradient-to-b from-white to-slate-50/60 rounded-2xl p-6 border border-emerald-900/15 shadow-sm hover:shadow-md hover:border-emerald-600/40 transition-all duration-300 flex flex-col items-center text-center space-y-4"
-              >
+            <div className="group flex-1 bg-gradient-to-b from-white to-slate-50/70 rounded-2xl p-5 border border-emerald-900/15 shadow-sm hover:shadow-md hover:border-emerald-600/40 transition-all duration-300 flex flex-col items-center text-center justify-between">
+              <div className="flex flex-col items-center w-full">
                 {/* Photo Frame */}
-                <div className="relative shrink-0">
-                  <div className="w-36 h-44 rounded-xl overflow-hidden bg-slate-100 border-2 border-emerald-700 shadow-md ring-4 ring-emerald-50 group-hover:ring-emerald-100 transition-all">
+                <div className="relative shrink-0 mb-4">
+                  <div className="w-32 h-40 rounded-xl overflow-hidden bg-slate-100 border-2 border-emerald-700 shadow-md ring-4 ring-emerald-50 group-hover:ring-emerald-100 transition-all">
                     <img
-                      src={patron.image}
-                      alt={patron.name}
+                      src={chiefPatron.image}
+                      alt={chiefPatron.name}
                       onError={(e) => {
-                        if (e.currentTarget.src !== patron.fallbackImage) {
-                          e.currentTarget.src = patron.fallbackImage;
+                        if (e.currentTarget.src !== chiefPatron.fallbackImage) {
+                          e.currentTarget.src = chiefPatron.fallbackImage;
                         }
                       }}
                       className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                  <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-800 text-[10px] font-bold text-white uppercase tracking-wider shadow-xs whitespace-nowrap">
-                    Patron
+                  <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-800 text-[9px] font-bold text-white uppercase tracking-wider shadow-xs whitespace-nowrap">
+                    Chief Patron
                   </div>
                 </div>
 
-                {/* Details */}
-                <div className="space-y-1.5 pt-2 w-full">
-                  <h4 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-                    {patron.name}
+                {/* Bio Details */}
+                <div className="space-y-1.5 w-full pt-1">
+                  <h4 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight leading-snug">
+                    {chiefPatron.name}
                   </h4>
                   <div className="text-xs sm:text-sm font-semibold text-emerald-800">
-                    {patron.role}
+                    {chiefPatron.role}
                   </div>
                   <div className="text-xs text-slate-600">
-                    {patron.institution}
+                    {chiefPatron.institution}
                   </div>
                 </div>
               </div>
-            ))}
+
+              <div className="mt-4 pt-3 border-t border-slate-200/70 w-full text-[11px] font-medium text-emerald-900/80">
+                Vice-Chancellor · University of Chittagong
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Patrons (3 Cards) */}
+          <div className="lg:col-span-8 flex flex-col">
+            <div className="flex items-center gap-2 pb-3 mb-4 border-b border-slate-200">
+              <ShieldCheck className="w-4 h-4 text-emerald-700" />
+              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
+                Patrons
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 flex-1">
+              {patrons.map((patron, idx) => (
+                <div
+                  key={idx}
+                  className="group bg-gradient-to-b from-white to-slate-50/70 rounded-2xl p-4 sm:p-4.5 border border-emerald-900/15 shadow-sm hover:shadow-md hover:border-emerald-600/40 transition-all duration-300 flex flex-col items-center text-center justify-between"
+                >
+                  <div className="flex flex-col items-center w-full">
+                    {/* Photo Frame */}
+                    <div className="relative shrink-0 mb-3.5">
+                      <div className="w-28 h-36 rounded-xl overflow-hidden bg-slate-100 border-2 border-emerald-700 shadow-md ring-4 ring-emerald-50 group-hover:ring-emerald-100 transition-all">
+                        <img
+                          src={patron.image}
+                          alt={patron.name}
+                          onError={(e) => {
+                            if (e.currentTarget.src !== patron.fallbackImage) {
+                              e.currentTarget.src = patron.fallbackImage;
+                            }
+                          }}
+                          className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-emerald-800 text-[9px] font-bold text-white uppercase tracking-wider shadow-xs whitespace-nowrap">
+                        Patron
+                      </div>
+                    </div>
+
+                    {/* Details */}
+                    <div className="space-y-1 w-full pt-1">
+                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">
+                        {patron.name}
+                      </h4>
+                      <div className="text-[11px] sm:text-xs font-semibold text-emerald-800">
+                        {patron.role}
+                      </div>
+                      <div className="text-[10px] sm:text-[11px] text-slate-600">
+                        {patron.institution}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-3 pt-2.5 border-t border-slate-200/70 w-full text-[10px] font-medium text-slate-500">
+                    Honorary Conference Patron
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
