@@ -22,8 +22,13 @@ export const Organizer: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 pb-6 border-b border-slate-200">
             <div className="w-20 h-20 rounded-2xl bg-white border border-slate-200 p-2 shrink-0 shadow-xs flex items-center justify-center">
               <img
-                src="/images/department-logo.svg"
-                alt="Department of GEB, University of Chittagong"
+                src="/images/cu-logo.png"
+                alt="University of Chittagong"
+                onError={(e) => {
+                  if (e.currentTarget.src !== "https://i.ibb.co/mFX5cDqC/culogo-1.png") {
+                    e.currentTarget.src = "https://i.ibb.co/mFX5cDqC/culogo-1.png";
+                  }
+                }}
                 className="w-full h-full object-contain"
               />
             </div>
