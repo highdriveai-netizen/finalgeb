@@ -45,13 +45,6 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
-            International Biotechnology Conference 2027 on <br />
-            <span className="font-serif italic font-normal text-emerald-800 text-4xl sm:text-6xl lg:text-7xl block mt-2">
-              “Biotechnology for Sustainable Development”
-            </span>
-          </h1>
-
           {/* Action Button Row */}
           <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
             <Link
