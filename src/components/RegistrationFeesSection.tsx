@@ -245,6 +245,25 @@ export const RegistrationFeesSection: React.FC<RegistrationFeesSectionProps> = (
                 Scan the official <strong>Bangla QR</strong> code at the department desk or transfer directly using any registered Bangladesh MFS app (bKash, Nagad, Rocket, Upay, or bank apps) to the conference account.
               </p>
 
+              {/* Official Bangla QR Image Presentation */}
+              <div className="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-2xl border border-slate-200 shadow-xs">
+                <div className="bg-white p-3 rounded-xl border border-slate-200/90 shadow-sm max-w-[260px] sm:max-w-[280px]">
+                  <img
+                    src="/images/bangla-qr-janata.jpg"
+                    alt="Janata Bank PLC Official Bangla QR Code for IBC 2027"
+                    onError={(e) => {
+                      if (e.currentTarget.src !== "https://i.ibb.co/tp2XbjfF/Whats-App-Image-2026-10-16-at-4-01-33-PM.jpg") {
+                        e.currentTarget.src = "https://i.ibb.co/tp2XbjfF/Whats-App-Image-2026-10-16-at-4-01-33-PM.jpg";
+                      }
+                    }}
+                    className="w-full h-auto object-contain rounded-lg"
+                  />
+                </div>
+                <span className="text-[11px] font-semibold text-emerald-800 mt-2.5">
+                  Official Janata Bank PLC · Bangla QR (Scan to Pay)
+                </span>
+              </div>
+
               <div className="bg-slate-50 rounded-lg p-3.5 border border-slate-200/80 space-y-1.5 text-xs">
                 <div className="font-semibold text-slate-800 flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
