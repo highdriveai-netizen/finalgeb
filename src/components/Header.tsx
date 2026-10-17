@@ -228,7 +228,7 @@ export const Header: React.FC = () => {
               })}
             </nav>
 
-            {/* Right: Primary Action Button (Submit Paper) */}
+            {/* Right: Primary Action Button (Submit Abstract) */}
             <div className="hidden sm:flex items-center gap-3">
               <a
                 href="https://forms.gle/RzeqcFCeakhUFMVF8"
@@ -236,7 +236,7 @@ export const Header: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold text-white bg-slate-900 hover:bg-emerald-800 active:bg-emerald-950 rounded-lg shadow-xs transition-all duration-200 hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600"
               >
-                <span>Submit Paper</span>
+                <span>Submit Abstract</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
