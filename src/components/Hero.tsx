@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center space-y-5">
           {/* Official Conference Logo Banner Presentation */}
           <div className="flex justify-center mb-2">
-            <div className="bg-white px-5 py-3 rounded-2xl border border-slate-200/90 shadow-sm max-w-sm sm:max-w-md w-full flex items-center justify-center">
+            <div className="bg-white px-6 py-4 sm:px-8 sm:py-6 rounded-3xl border border-slate-200/90 shadow-md max-w-lg sm:max-w-2xl w-full flex items-center justify-center">
               <img
                 src={CONFERENCE_INFO.logoUrl}
                 alt="2nd International Biotechnology Conference 2027"
@@ -40,15 +40,9 @@ export const Hero: React.FC = () => {
                     e.currentTarget.src = CONFERENCE_INFO.logoFallbackUrl;
                   }
                 }}
-                className="w-full h-auto max-h-24 sm:max-h-28 object-contain"
+                className="w-full h-auto max-h-36 sm:max-h-48 md:max-h-56 object-contain"
               />
             </div>
-          </div>
-
-          <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-emerald-800 flex items-center justify-center gap-2">
-            <span className="w-6 h-0.5 bg-emerald-600 inline-block" />
-            <span>2ND INTERNATIONAL BIOTECHNOLOGY CONFERENCE 2027</span>
-            <span className="w-6 h-0.5 bg-emerald-600 inline-block" />
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
