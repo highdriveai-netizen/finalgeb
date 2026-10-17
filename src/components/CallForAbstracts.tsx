@@ -99,15 +99,6 @@ export const CallForAbstracts: React.FC = () => {
                     <span>1 December 2026</span>
                   </div>
                 </div>
-
-                <div className="pt-2 border-t border-white/15">
-                  <Link
-                    to="/results"
-                    className="block text-center text-xs font-semibold text-emerald-200 hover:text-white underline decoration-emerald-400"
-                  >
-                    Already submitted? Check your abstract status →
-                  </Link>
-                </div>
               </div>
             </div>
           </div>

@@ -69,14 +69,6 @@ export const Hero: React.FC = () => {
               <span>Explore 8 themes</span>
               <ArrowDownRight className="w-4 h-4 text-slate-400 group-hover:translate-y-0.5 transition-transform" />
             </a>
-
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-1.5 px-3 py-3 text-xs sm:text-sm font-semibold text-emerald-800 hover:text-emerald-950 hover:underline underline-offset-4"
-            >
-              <FileText className="w-4 h-4" />
-              <span>Conference details &amp; brochure</span>
-            </Link>
           </div>
         </div>
 
