@@ -23,7 +23,7 @@ export const AboutPage: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
         {/* Section 1: Legacy from 2023 to 2026 */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <section id="conference" className="scroll-mt-28 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-5">
             <div className="text-xs font-bold text-emerald-800 uppercase tracking-widest">
               From National Excellence to Global Collaboration
@@ -69,10 +69,10 @@ export const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Section 2: Department Background */}
-        <div className="bg-slate-50 rounded-2xl p-8 sm:p-10 border border-slate-200 space-y-6">
+        <section id="department" className="scroll-mt-28 bg-slate-50 rounded-2xl p-8 sm:p-10 border border-slate-200 space-y-6">
           <div className="max-w-3xl space-y-2">
             <span className="text-xs font-bold text-emerald-800 uppercase tracking-widest">
               Established 2004 · University of Chittagong
@@ -100,10 +100,10 @@ export const AboutPage: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Section 3: Organizing Committee Structure (Placeholders) */}
-        <div className="space-y-8">
+        <section id="committee" className="scroll-mt-28 space-y-8">
           <div>
             <div className="text-xs font-bold text-emerald-800 uppercase tracking-widest mb-1">
               Leadership &amp; Governance
@@ -127,7 +127,7 @@ export const AboutPage: React.FC = () => {
               The full lineup of patrons, organizing chairs, secretaries, and scientific advisory committee members will be published shortly.
             </p>
           </div>
-        </div>
+        </section>
 
         {/* Call to Action */}
         <div className="text-center bg-emerald-900 text-white rounded-2xl p-8 sm:p-12 space-y-4">

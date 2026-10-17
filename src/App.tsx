@@ -18,15 +18,28 @@ const ScrollToTop: React.FC = () => {
 
   useEffect(() => {
     if (hash) {
-      const element = document.getElementById(hash.replace('#', ''));
-      if (element) {
-        setTimeout(() => {
+      const targetId = hash.replace('#', '');
+      const scrollToElement = () => {
+        const element = document.getElementById(targetId);
+        if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-        return;
+          return true;
+        }
+        return false;
+      };
+
+      // Try immediately, then retry in case DOM is still rendering
+      if (!scrollToElement()) {
+        const timeout1 = setTimeout(scrollToElement, 100);
+        const timeout2 = setTimeout(scrollToElement, 300);
+        return () => {
+          clearTimeout(timeout1);
+          clearTimeout(timeout2);
+        };
       }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    window.scrollTo(0, 0);
   }, [pathname, hash]);
 
   return null;
