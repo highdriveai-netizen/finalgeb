@@ -101,7 +101,7 @@ export const CONFERENCE_INFO = {
   venue: "Faculty of Biological Sciences, University of Chittagong",
   venueShort: "CU Campus, Chattogram",
   officialWebsite: "https://ibc2027.org/",
-  abstractPortalUrl: "https://forms.gle/RzeqcFCeakhUFMVF8",
+  abstractPortalUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfrR7_Dbb-RqUJPXGyZGl9cNx5nsgO3x44ExruFNaAouVKr0g/viewform",
   logoUrl: "/images/custom-logo.jpeg",
   logoFallbackUrl: "https://i.ibb.co/YSk3nmW/NBC-Logo.jpg",
   iconUrl: "/images/conference-icon.jpg",
