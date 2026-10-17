@@ -103,7 +103,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center justify-between" ref={dropdownRef}>
             {/* Left: Official Logo & Identity */}
             <Link to="/" className="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 rounded-lg">
-              <div className="h-11 w-11 sm:h-12 sm:w-12 rounded-xl bg-white p-1 flex items-center justify-center shadow-xs transition-transform group-hover:scale-105 shrink-0 border border-slate-200/90 overflow-hidden">
+              <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-2xl bg-white p-1 flex items-center justify-center shadow-xs transition-transform group-hover:scale-105 shrink-0 border border-slate-200/90 overflow-hidden">
                 <img
                   src={CONFERENCE_INFO.iconUrl}
                   alt={CONFERENCE_INFO.shortName}
@@ -117,13 +117,10 @@ export const Header: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-xl sm:text-2xl text-slate-900 tracking-tight leading-none group-hover:text-emerald-800 transition-colors">
+                  <span className="font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight leading-none group-hover:text-emerald-800 transition-colors">
                     IBC 2027
                   </span>
                 </div>
-                <span className="text-[11px] sm:text-xs text-slate-500 font-medium leading-tight mt-1 hidden sm:block">
-                  Dept. of GEB · University of Chittagong
-                </span>
               </div>
             </Link>
 
