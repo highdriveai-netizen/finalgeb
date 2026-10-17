@@ -31,11 +31,16 @@ export const Hero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center space-y-5">
           {/* Official Conference Logo Banner Presentation */}
           <div className="flex justify-center mb-2">
-            <div className="bg-white/90 backdrop-blur-xs px-6 py-4 rounded-2xl border border-slate-200/90 shadow-sm max-w-xl w-full flex items-center justify-center">
+            <div className="bg-white px-5 py-3 rounded-2xl border border-slate-200/90 shadow-sm max-w-sm sm:max-w-md w-full flex items-center justify-center">
               <img
-                src="/images/conference-logo.svg"
-                alt="International Biotechnology Conference 2027 Official Logo"
-                className="w-full max-h-24 sm:max-h-28 object-contain"
+                src={CONFERENCE_INFO.logoUrl}
+                alt="2nd International Biotechnology Conference 2027"
+                onError={(e) => {
+                  if (e.currentTarget.src !== CONFERENCE_INFO.logoFallbackUrl) {
+                    e.currentTarget.src = CONFERENCE_INFO.logoFallbackUrl;
+                  }
+                }}
+                className="w-full h-auto max-h-24 sm:max-h-28 object-contain"
               />
             </div>
           </div>
