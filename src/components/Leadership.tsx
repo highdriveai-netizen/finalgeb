@@ -50,12 +50,20 @@ export const Leadership: React.FC = () => {
     fallbackImage: 'https://i.ibb.co/jPpzQV6Z/Gemini-Generated-Image-o0ojxfo0ojxfo0oj.jpg',
   };
 
-  const convener: LeaderMember = {
+  const memberSecretary: LeaderMember = {
     name: 'Professor Dr. Lolo Wal Marzan',
     role: 'Professor, Department of Genetic Engineering and Biotechnology',
     institution: 'University of Chittagong, Bangladesh',
     image: '/images/leadership/convener-lolo-wal-marzan.jpg',
     fallbackImage: 'https://i.ibb.co/YFFXpx8r/Gemini-Generated-Image-g2wn8mg2wn8mg2wn.jpg',
+  };
+
+  const convener: LeaderMember = {
+    name: 'Professor Dr. Md. Rafiqul Islam',
+    role: 'Professor, Department of Genetic Engineering and Biotechnology',
+    institution: 'University of Chittagong, Bangladesh',
+    image: '/images/leadership/convener-rafiqul-islam.jpg',
+    fallbackImage: 'https://i.ibb.co/PZvJ3qkY/Gemini-Generated-Image-fu4r82fu4r82fu4r.jpg',
   };
 
   return (
@@ -186,85 +194,154 @@ export const Leadership: React.FC = () => {
           </div>
         </div>
 
-        {/* 3. Conference Chair & Convener */}
-        <div className="space-y-6">
-          <div className="flex items-center gap-2 pb-3 border-b border-slate-200">
-            <Award className="w-5 h-5 text-emerald-700" />
-            <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-              Conference Chair &amp; Convener
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Conference Chair */}
-            <div className="group bg-gradient-to-b from-white to-slate-50/60 rounded-2xl p-6 sm:p-7 border border-emerald-900/15 shadow-sm hover:shadow-md hover:border-emerald-600/40 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-              <div className="relative shrink-0">
-                <div className="w-36 h-44 rounded-xl overflow-hidden bg-slate-100 border-2 border-emerald-700 shadow-md ring-4 ring-emerald-50 group-hover:ring-emerald-100 transition-all">
-                  <img
-                    src={conferenceChair.image}
-                    alt={conferenceChair.name}
-                    onError={(e) => {
-                      if (e.currentTarget.src !== conferenceChair.fallbackImage) {
-                        e.currentTarget.src = conferenceChair.fallbackImage;
-                      }
-                    }}
-                    className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-800 text-[10px] font-bold text-white uppercase tracking-wider shadow-xs whitespace-nowrap">
-                  Conference Chair
-                </div>
-              </div>
-
-              <div className="text-center sm:text-left space-y-1.5 pt-2">
-                <span className="text-[11px] font-mono font-bold text-emerald-800 uppercase tracking-wider">
-                  Organizing Leadership
-                </span>
-                <h4 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-                  {conferenceChair.name}
-                </h4>
-                <div className="text-xs sm:text-sm font-semibold text-emerald-800">
-                  {conferenceChair.role}
-                </div>
-                <div className="text-xs text-slate-600">
-                  {conferenceChair.institution}
-                </div>
-              </div>
+        {/* 3. Conference Chair, Member Secretary, and Convener in the Same Line */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          {/* Conference Chair */}
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2 pb-3 mb-4 border-b border-slate-200">
+              <Award className="w-4 h-4 text-emerald-700" />
+              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
+                Conference Chair
+              </h3>
             </div>
 
-            {/* Convener */}
-            <div className="group bg-gradient-to-b from-white to-slate-50/60 rounded-2xl p-6 sm:p-7 border border-emerald-900/15 shadow-sm hover:shadow-md hover:border-emerald-600/40 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-              <div className="relative shrink-0">
-                <div className="w-36 h-44 rounded-xl overflow-hidden bg-slate-100 border-2 border-emerald-700 shadow-md ring-4 ring-emerald-50 group-hover:ring-emerald-100 transition-all">
-                  <img
-                    src={convener.image}
-                    alt={convener.name}
-                    onError={(e) => {
-                      if (e.currentTarget.src !== convener.fallbackImage) {
-                        e.currentTarget.src = convener.fallbackImage;
-                      }
-                    }}
-                    className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
-                  />
+            <div className="group flex-1 bg-gradient-to-b from-white to-slate-50/70 rounded-2xl p-5 border border-emerald-900/15 shadow-sm hover:shadow-md hover:border-emerald-600/40 transition-all duration-300 flex flex-col items-center text-center justify-between">
+              <div className="flex flex-col items-center w-full">
+                {/* Photo Frame */}
+                <div className="relative shrink-0 mb-4">
+                  <div className="w-32 h-40 rounded-xl overflow-hidden bg-slate-100 border-2 border-emerald-700 shadow-md ring-4 ring-emerald-50 group-hover:ring-emerald-100 transition-all">
+                    <img
+                      src={conferenceChair.image}
+                      alt={conferenceChair.name}
+                      onError={(e) => {
+                        if (e.currentTarget.src !== conferenceChair.fallbackImage) {
+                          e.currentTarget.src = conferenceChair.fallbackImage;
+                        }
+                      }}
+                      className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-800 text-[9px] font-bold text-white uppercase tracking-wider shadow-xs whitespace-nowrap">
+                    Conference Chair
+                  </div>
                 </div>
-                <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-800 text-[10px] font-bold text-white uppercase tracking-wider shadow-xs whitespace-nowrap">
-                  Convener
+
+                {/* Details */}
+                <div className="space-y-1 w-full pt-1">
+                  <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                    {conferenceChair.name}
+                  </h4>
+                  <div className="text-xs sm:text-sm font-semibold text-emerald-800">
+                    {conferenceChair.role}
+                  </div>
+                  <div className="text-xs text-slate-600">
+                    {conferenceChair.institution}
+                  </div>
                 </div>
               </div>
 
-              <div className="text-center sm:text-left space-y-1.5 pt-2">
-                <span className="text-[11px] font-mono font-bold text-emerald-800 uppercase tracking-wider">
-                  Program Secretariat
-                </span>
-                <h4 className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-                  {convener.name}
-                </h4>
-                <div className="text-xs sm:text-sm font-semibold text-emerald-800">
-                  {convener.role}
+              <div className="mt-4 pt-3 border-t border-slate-200/70 w-full text-[10px] font-medium text-emerald-900/80">
+                Conference Executive Committee
+              </div>
+            </div>
+          </div>
+
+          {/* Member Secretary */}
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2 pb-3 mb-4 border-b border-slate-200">
+              <Award className="w-4 h-4 text-emerald-700" />
+              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
+                Member Secretary
+              </h3>
+            </div>
+
+            <div className="group flex-1 bg-gradient-to-b from-white to-slate-50/70 rounded-2xl p-5 border border-emerald-900/15 shadow-sm hover:shadow-md hover:border-emerald-600/40 transition-all duration-300 flex flex-col items-center text-center justify-between">
+              <div className="flex flex-col items-center w-full">
+                {/* Photo Frame */}
+                <div className="relative shrink-0 mb-4">
+                  <div className="w-32 h-40 rounded-xl overflow-hidden bg-slate-100 border-2 border-emerald-700 shadow-md ring-4 ring-emerald-50 group-hover:ring-emerald-100 transition-all">
+                    <img
+                      src={memberSecretary.image}
+                      alt={memberSecretary.name}
+                      onError={(e) => {
+                        if (e.currentTarget.src !== memberSecretary.fallbackImage) {
+                          e.currentTarget.src = memberSecretary.fallbackImage;
+                        }
+                      }}
+                      className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-800 text-[9px] font-bold text-white uppercase tracking-wider shadow-xs whitespace-nowrap">
+                    Member Secretary
+                  </div>
                 </div>
-                <div className="text-xs text-slate-600">
-                  {convener.institution}
+
+                {/* Details */}
+                <div className="space-y-1 w-full pt-1">
+                  <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                    {memberSecretary.name}
+                  </h4>
+                  <div className="text-xs sm:text-sm font-semibold text-emerald-800">
+                    {memberSecretary.role}
+                  </div>
+                  <div className="text-xs text-slate-600">
+                    {memberSecretary.institution}
+                  </div>
                 </div>
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-slate-200/70 w-full text-[10px] font-medium text-emerald-900/80">
+                Conference Secretariat
+              </div>
+            </div>
+          </div>
+
+          {/* Convener */}
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2 pb-3 mb-4 border-b border-slate-200">
+              <Award className="w-4 h-4 text-emerald-700" />
+              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
+                Convener
+              </h3>
+            </div>
+
+            <div className="group flex-1 bg-gradient-to-b from-white to-slate-50/70 rounded-2xl p-5 border border-emerald-900/15 shadow-sm hover:shadow-md hover:border-emerald-600/40 transition-all duration-300 flex flex-col items-center text-center justify-between">
+              <div className="flex flex-col items-center w-full">
+                {/* Photo Frame */}
+                <div className="relative shrink-0 mb-4">
+                  <div className="w-32 h-40 rounded-xl overflow-hidden bg-slate-100 border-2 border-emerald-700 shadow-md ring-4 ring-emerald-50 group-hover:ring-emerald-100 transition-all">
+                    <img
+                      src={convener.image}
+                      alt={convener.name}
+                      onError={(e) => {
+                        if (e.currentTarget.src !== convener.fallbackImage) {
+                          e.currentTarget.src = convener.fallbackImage;
+                        }
+                      }}
+                      className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-emerald-800 text-[9px] font-bold text-white uppercase tracking-wider shadow-xs whitespace-nowrap">
+                    Convener
+                  </div>
+                </div>
+
+                {/* Details */}
+                <div className="space-y-1 w-full pt-1">
+                  <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                    {convener.name}
+                  </h4>
+                  <div className="text-xs sm:text-sm font-semibold text-emerald-800">
+                    {convener.role}
+                  </div>
+                  <div className="text-xs text-slate-600">
+                    {convener.institution}
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-slate-200/70 w-full text-[10px] font-medium text-emerald-900/80">
+                Organizing Committee Convener
               </div>
             </div>
           </div>
