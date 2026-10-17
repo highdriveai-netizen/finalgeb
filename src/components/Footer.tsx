@@ -36,32 +36,30 @@ export const Footer: React.FC = () => {
       {/* Navigation Columns */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
-          {/* Col 1: Institutional Leadership & Official Conference Identity */}
+          {/* Col 1: Institutional Leadership */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="p-3 bg-white rounded-xl max-w-xs shadow-xs border border-slate-800">
-              <img
-                src="/images/conference-logo.svg"
-                alt="International Biotechnology Conference 2027"
-                className="w-full h-auto object-contain max-h-16"
-              />
-            </div>
-
-            <div className="flex items-center gap-3 pt-1">
-              <div className="w-8 h-8 rounded-lg bg-emerald-950 p-1 flex items-center justify-center text-white border border-emerald-800 shrink-0">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-800 to-teal-900 p-1 flex items-center justify-center text-white border border-emerald-700 overflow-hidden shrink-0">
                 <img
-                  src="/images/university-logo.svg"
-                  alt="University of Chittagong"
-                  className="w-full h-full object-contain filter invert brightness-200"
+                  src={CONFERENCE_INFO.logoUrl}
+                  alt={CONFERENCE_INFO.shortName}
+                  onError={(e) => {
+                    if (e.currentTarget.src !== CONFERENCE_INFO.logoFallbackUrl) {
+                      e.currentTarget.src = CONFERENCE_INFO.logoFallbackUrl;
+                      e.currentTarget.className = "w-full h-full object-contain filter invert brightness-200 p-0.5";
+                    }
+                  }}
+                  className="w-full h-full object-contain rounded-lg"
                 />
               </div>
               <div>
-                <span className="text-xs text-slate-300 font-semibold block leading-tight">University of Chittagong</span>
-                <span className="text-[11px] text-slate-500 font-medium">Faculty of Biological Sciences</span>
+                <span className="font-extrabold text-lg text-white tracking-tight block leading-tight">IBC 2027</span>
+                <span className="text-xs text-emerald-400 font-medium">Biotechnology for Sustainable Development</span>
               </div>
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed">
-              Organized by the Department of Genetic Engineering &amp; Biotechnology (GEB), University of Chittagong, Bangladesh.
+              Organized by the Department of Genetic Engineering &amp; Biotechnology (GEB), Faculty of Biological Sciences, University of Chittagong, Bangladesh.
             </p>
           </div>
 

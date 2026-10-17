@@ -102,6 +102,8 @@ export const CONFERENCE_INFO = {
   venueShort: "CU Campus, Chattogram",
   officialWebsite: "https://ibc2027.org/",
   abstractPortalUrl: "https://forms.gle/RzeqcFCeakhUFMVF8",
+  logoUrl: "/images/custom-logo.jpeg",
+  logoFallbackUrl: "/images/university-logo.svg",
   contactEmail: "ibc2027@cu.ac.bd",
   departmentEmail: "geb@cu.ac.bd",
   departmentPortal: "https://cu.ac.bd/dgeb/",
