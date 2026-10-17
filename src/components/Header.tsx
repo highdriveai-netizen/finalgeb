@@ -94,8 +94,6 @@ export const Header: React.FC = () => {
       items: [
         { label: 'Call for Abstracts', path: '/submit-article' },
         { label: 'Submission Guidelines', path: '/submit-article#guidelines' },
-        { label: 'Check Submission Status', path: '/results' },
-        { label: 'Google Forms Portal ↗', path: CONFERENCE_INFO.abstractPortalUrl, isExternal: true },
       ],
     },
     {
@@ -269,22 +267,22 @@ export const Header: React.FC = () => {
               {/* Mobile About */}
               <div className="space-y-1 pl-3 border-l-2 border-emerald-600">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400 py-1">About</div>
-                <Link to="/about#conference" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">About Conference</Link>
-                <Link to="/about#department" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">About GEB Department</Link>
-                <Link to="/about#committee" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Organizing Committee</Link>
-                <Link to="/about#university" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Host University (CU)</Link>
+                <Link to="/about#conference" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">About Conference</Link>
+                <Link to="/about#department" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">About GEB Department</Link>
+                <Link to="/about#committee" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Organizing Committee</Link>
               </div>
 
               {/* Mobile Program */}
               <div className="space-y-1 pl-3 border-l-2 border-teal-600">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400 py-1">Program</div>
-                <Link to="/agenda" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Conference Agenda</Link>
-                <Link to="/#themes" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">8 Research Areas</Link>
-                <Link to="/about#events" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">5 Key Events</Link>
+                <Link to="/agenda" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Conference Agenda</Link>
+                <Link to="/#themes" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">8 Research Areas</Link>
+                <Link to="/about#events" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">5 Key Events</Link>
               </div>
 
               <Link
                 to="/speakers"
+                onClick={() => setMobileMenuOpen(false)}
                 className="block px-3 py-2 rounded-md text-sm font-semibold text-slate-800 hover:bg-slate-50"
               >
                 Keynote Speaker
@@ -293,12 +291,8 @@ export const Header: React.FC = () => {
               {/* Mobile Authors */}
               <div className="space-y-1 pl-3 border-l-2 border-emerald-600">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400 py-1">Authors</div>
-                <Link to="/submit-article" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Call for Abstracts</Link>
-                <Link to="/submit-article#guidelines" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Submission Guidelines</Link>
-                <Link to="/results" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Check Submission Status</Link>
-                <a href={CONFERENCE_INFO.abstractPortalUrl} target="_blank" rel="noopener noreferrer" className="block text-xs py-1.5 text-emerald-700 font-semibold">
-                  Google Forms Portal ↗
-                </a>
+                <Link to="/submit-article" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Call for Abstracts</Link>
+                <Link to="/submit-article#guidelines" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Submission Guidelines</Link>
               </div>
 
               {/* Mobile Registration */}
