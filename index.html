@@ -73,6 +73,22 @@
   </head>
   <body class="bg-[#fafbfc] text-slate-900 font-sans antialiased selection:bg-emerald-100 selection:text-emerald-900">
     <div id="root"></div>
+    <script>
+      // Single Page Application redirect restorer for static web hosts (GitHub Pages, etc.)
+      (function() {
+        var redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+          sessionStorage.removeItem('redirect');
+          history.replaceState(null, null, redirect);
+        } else {
+          var query = window.location.search;
+          if (query && query.indexOf('?p=') === 0) {
+            var decoded = decodeURIComponent(query.slice(3));
+            history.replaceState(null, null, decoded);
+          }
+        }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
