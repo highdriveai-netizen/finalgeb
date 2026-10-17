@@ -7,6 +7,8 @@ import {
   Clock,
   HelpCircle,
   ArrowRight,
+  BookOpen,
+  CheckCircle2,
 } from 'lucide-react';
 import { CONFERENCE_INFO } from '../data/conferenceData';
 
@@ -65,6 +67,74 @@ export const SubmitArticlePage: React.FC = () => {
 
           <div className="pt-4 border-t border-slate-100 max-w-md mx-auto text-xs text-slate-500">
             <span>Deadline: <strong>15 November 2026</strong> · Free of charge</span>
+          </div>
+        </div>
+
+        {/* Submission Guideline Section */}
+        <div id="guidelines" className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-10 space-y-6">
+          <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
+            <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center shrink-0 border border-emerald-200/70">
+              <BookOpen className="w-5 h-5 text-emerald-700" />
+            </div>
+            <div>
+              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                Submission Guideline
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500">
+                Please follow the instructions below before submitting your manuscript abstract.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <div className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <strong>Submission &amp; Authorship:</strong> Submission must be done by the corresponding/presenting author. Name of the presenting author should be marked in <strong>bold</strong>.
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-emerald-50/60 border border-emerald-200/70 flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <div className="text-xs sm:text-sm text-emerald-950 leading-relaxed">
+                <strong>Submission Fee:</strong> <span className="font-semibold text-emerald-800">No payment is required for the submission.</span>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <div className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <strong>Category &amp; Area:</strong> Category and area of presentation must be mentioned on the top of the abstract.
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <div className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <strong>Word Limit:</strong> Maximum <strong>250 words</strong> (Abstract body).
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <div className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <strong>Typography:</strong> Font: <strong>Times New Roman</strong>, Font size: <strong>12</strong>.
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <div className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                <strong>Abstract Contents:</strong> Background/Objective(s), Methodology, Findings, and Conclusion.
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-xl bg-amber-50/80 border border-amber-200 text-xs sm:text-sm text-amber-950 flex items-start gap-3">
+            <CheckCircle2 className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+            <div className="leading-relaxed">
+              <strong>Individual Registration Requirement:</strong> Each author of the accepted abstracts must register individually (if more than one author of the paper wants to join the conference).
+            </div>
           </div>
         </div>
 
