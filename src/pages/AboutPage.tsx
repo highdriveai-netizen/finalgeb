@@ -117,48 +117,16 @@ export const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-2">
-              <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider">Chief Patron</div>
-              <h3 className="text-base font-bold text-slate-900">Vice-Chancellor</h3>
-              <p className="text-xs text-slate-600">University of Chittagong, Bangladesh</p>
-              <span className="text-[11px] text-slate-400 block pt-2">[Institutional Ex-Officio Patron]</span>
+          <div className="p-10 sm:p-16 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex flex-col items-center justify-center text-center space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold uppercase tracking-wider">
+              <span>Announcement</span>
             </div>
-
-            <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-2">
-              <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider">Patron</div>
-              <h3 className="text-base font-bold text-slate-900">Dean, Faculty of Biological Sciences</h3>
-              <p className="text-xs text-slate-600">University of Chittagong</p>
-              <span className="text-[11px] text-slate-400 block pt-2">[Institutional Ex-Officio Patron]</span>
-            </div>
-
-            <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-2">
-              <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider">Organizing Chair</div>
-              <h3 className="text-base font-bold text-slate-900">Chairman, Dept. of GEB</h3>
-              <p className="text-xs text-slate-600">University of Chittagong</p>
-              <span className="text-[11px] text-slate-400 block pt-2">[Departmental Executive Head]</span>
-            </div>
-
-            <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-2">
-              <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider">Organizing Secretary</div>
-              <h3 className="text-base font-bold text-slate-900">[Faculty Member / Professor]</h3>
-              <p className="text-xs text-slate-600">Department of GEB, University of Chittagong</p>
-              <span className="text-[11px] text-slate-400 block pt-2">[Committee Appointment TBA]</span>
-            </div>
-
-            <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-2">
-              <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider">Scientific Review Committee</div>
-              <h3 className="text-base font-bold text-slate-900">Board of Peer Reviewers</h3>
-              <p className="text-xs text-slate-600">GEB Faculty &amp; National / International Experts</p>
-              <span className="text-[11px] text-slate-400 block pt-2">[Abstract Peer-Review Panel]</span>
-            </div>
-
-            <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-2">
-              <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider">Secretariat &amp; Logistics</div>
-              <h3 className="text-base font-bold text-slate-900">GEB Faculty, Staff &amp; Scholars</h3>
-              <p className="text-xs text-slate-600">University of Chittagong</p>
-              <span className="text-[11px] text-slate-400 block pt-2">[Logistics &amp; Reception Desk]</span>
-            </div>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
+              Updating Soon
+            </h3>
+            <p className="text-sm sm:text-base text-slate-500 max-w-lg">
+              The full lineup of patrons, organizing chairs, secretaries, and scientific advisory committee members will be published shortly.
+            </p>
           </div>
         </div>
 
