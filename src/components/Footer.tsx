@@ -39,17 +39,16 @@ export const Footer: React.FC = () => {
           {/* Col 1: Institutional Leadership */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-800 to-teal-900 p-1 flex items-center justify-center text-white border border-emerald-700 overflow-hidden shrink-0">
+              <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-white p-1 flex items-center justify-center border border-white/20 overflow-hidden shrink-0 shadow-xs">
                 <img
                   src={CONFERENCE_INFO.logoUrl}
                   alt={CONFERENCE_INFO.shortName}
                   onError={(e) => {
                     if (e.currentTarget.src !== CONFERENCE_INFO.logoFallbackUrl) {
                       e.currentTarget.src = CONFERENCE_INFO.logoFallbackUrl;
-                      e.currentTarget.className = "w-full h-full object-contain filter invert brightness-200 p-0.5";
                     }
                   }}
-                  className="w-full h-full object-contain rounded-lg"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>

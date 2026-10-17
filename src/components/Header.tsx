@@ -103,17 +103,16 @@ export const Header: React.FC = () => {
           <div className="flex items-center justify-between" ref={dropdownRef}>
             {/* Left: Official Logo & Identity */}
             <Link to="/" className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 rounded-lg">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-800 to-teal-900 p-1 flex items-center justify-center text-white shadow-xs transition-transform group-hover:scale-105 shrink-0 border border-emerald-700/50 overflow-hidden">
+              <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-white p-1 flex items-center justify-center shadow-xs transition-transform group-hover:scale-105 shrink-0 border border-slate-200/90 overflow-hidden">
                 <img
                   src={CONFERENCE_INFO.logoUrl}
                   alt={CONFERENCE_INFO.shortName}
                   onError={(e) => {
                     if (e.currentTarget.src !== CONFERENCE_INFO.logoFallbackUrl) {
                       e.currentTarget.src = CONFERENCE_INFO.logoFallbackUrl;
-                      e.currentTarget.className = "w-full h-full object-contain filter invert brightness-200 p-0.5";
                     }
                   }}
-                  className="w-full h-full object-contain rounded-lg"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="flex flex-col">
