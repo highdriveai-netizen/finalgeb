@@ -102,8 +102,8 @@ export const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between" ref={dropdownRef}>
             {/* Left: Official Logo & Identity */}
-            <Link to="/" className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 rounded-lg">
-              <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-white p-1 flex items-center justify-center shadow-xs transition-transform group-hover:scale-105 shrink-0 border border-slate-200/90 overflow-hidden">
+            <Link to="/" className="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 rounded-lg">
+              <div className="h-12 w-24 sm:h-14 sm:w-28 rounded-xl bg-white p-1.5 flex items-center justify-center shadow-xs transition-transform group-hover:scale-105 shrink-0 border border-slate-200/90 overflow-hidden">
                 <img
                   src={CONFERENCE_INFO.logoUrl}
                   alt={CONFERENCE_INFO.shortName}
@@ -117,11 +117,11 @@ export const Header: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-2">
-                  <span className="font-extrabold text-lg text-slate-900 tracking-tight leading-none group-hover:text-emerald-800 transition-colors">
+                  <span className="font-extrabold text-xl sm:text-2xl text-slate-900 tracking-tight leading-none group-hover:text-emerald-800 transition-colors">
                     IBC 2027
                   </span>
                 </div>
-                <span className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5 hidden sm:block">
+                <span className="text-[11px] sm:text-xs text-slate-500 font-medium leading-tight mt-1 hidden sm:block">
                   Dept. of GEB · University of Chittagong
                 </span>
               </div>

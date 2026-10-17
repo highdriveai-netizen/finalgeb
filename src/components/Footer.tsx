@@ -38,8 +38,8 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
           {/* Col 1: Institutional Leadership */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-white p-1 flex items-center justify-center border border-white/20 overflow-hidden shrink-0 shadow-xs">
+            <div className="flex items-center gap-3.5">
+              <div className="h-12 w-24 sm:h-14 sm:w-28 rounded-xl bg-white p-1.5 flex items-center justify-center border border-white/20 overflow-hidden shrink-0 shadow-xs">
                 <img
                   src={CONFERENCE_INFO.logoUrl}
                   alt={CONFERENCE_INFO.shortName}
@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
                 />
               </div>
               <div>
-                <span className="font-extrabold text-lg text-white tracking-tight block leading-tight">IBC 2027</span>
+                <span className="font-extrabold text-xl text-white tracking-tight block leading-tight">IBC 2027</span>
                 <span className="text-xs text-emerald-400 font-medium">Biotechnology for Sustainable Development</span>
               </div>
             </div>
