@@ -6,6 +6,7 @@ import { ImportantDates } from '../components/ImportantDates';
 import { CallForAbstracts } from '../components/CallForAbstracts';
 import { Agenda } from '../components/Agenda';
 import { Organizer } from '../components/Organizer';
+import { Leadership } from '../components/Leadership';
 import { Contact } from '../components/Contact';
 
 export const Home: React.FC = () => {
@@ -29,8 +30,11 @@ export const Home: React.FC = () => {
       {/* 04 / PROGRAM HIGHLIGHTS: 1-Day Scientific Agenda (Soft Slate Neutral) */}
       <Agenda isPreview={true} />
 
-      {/* 05 / HOST & LEADERSHIP: Department of GEB & University of Chittagong (Scholarly Slate) */}
+      {/* 05 / HOST: Department of GEB & University of Chittagong */}
       <Organizer />
+
+      {/* 06 / PATRONAGE & LEADERSHIP: Chief Patron, Patrons, Chair, and Convener */}
+      <Leadership />
 
       {/* Contact Secretariat & Travel Directions (Crisp White) */}
       <Contact />
