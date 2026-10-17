@@ -9,6 +9,32 @@ export const Header: React.FC = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = (key: string) => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setOpenDropdown(key);
+  };
+
+  const handleMouseLeave = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+    }
+    closeTimeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 250);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -133,8 +159,8 @@ export const Header: React.FC = () => {
                     <div
                       key={item.key}
                       className="relative"
-                      onMouseEnter={() => setOpenDropdown(item.key)}
-                      onMouseLeave={() => setOpenDropdown(null)}
+                      onMouseEnter={() => handleMouseEnter(item.key!)}
+                      onMouseLeave={handleMouseLeave}
                     >
                       <button
                         type="button"
@@ -148,32 +174,39 @@ export const Header: React.FC = () => {
                         <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-150 ${isOpen ? 'rotate-180 text-emerald-700' : 'text-slate-400'}`} />
                       </button>
 
-                      {/* Dropdown Menu */}
+                      {/* Dropdown Menu with zero gap / invisible hover bridge */}
                       {isOpen && (
-                        <div className="absolute top-full left-0 mt-1 min-w-[210px] bg-white rounded-xl shadow-lg border border-slate-200/90 py-1.5 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
-                          {item.items?.map((subItem) => (
-                            subItem.isExternal ? (
-                              <a
-                                key={subItem.label}
-                                href={subItem.path}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center justify-between px-3.5 py-2 text-xs font-medium text-slate-700 hover:text-emerald-800 hover:bg-emerald-50/70 transition-colors"
-                              >
-                                <span>{subItem.label}</span>
-                                <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
-                              </a>
-                            ) : (
-                              <Link
-                                key={subItem.label}
-                                to={subItem.path}
-                                onClick={() => setOpenDropdown(null)}
-                                className="block px-3.5 py-2 text-xs font-medium text-slate-700 hover:text-emerald-800 hover:bg-emerald-50/70 transition-colors"
-                              >
-                                {subItem.label}
-                              </Link>
-                            )
-                          ))}
+                        <div
+                          className="absolute top-full left-0 pt-2 min-w-[220px] z-50"
+                          onMouseEnter={() => handleMouseEnter(item.key!)}
+                          onMouseLeave={handleMouseLeave}
+                        >
+                          <div className="bg-white rounded-xl shadow-xl border border-slate-200/90 py-1.5 overflow-hidden">
+                            {item.items?.map((subItem) => (
+                              subItem.isExternal ? (
+                                <a
+                                  key={subItem.label}
+                                  href={subItem.path}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={() => setOpenDropdown(null)}
+                                  className="flex items-center justify-between px-3.5 py-2.5 text-xs font-medium text-slate-700 hover:text-emerald-800 hover:bg-emerald-50 transition-colors"
+                                >
+                                  <span>{subItem.label}</span>
+                                  <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
+                                </a>
+                              ) : (
+                                <Link
+                                  key={subItem.label}
+                                  to={subItem.path}
+                                  onClick={() => setOpenDropdown(null)}
+                                  className="block px-3.5 py-2.5 text-xs font-medium text-slate-700 hover:text-emerald-800 hover:bg-emerald-50 transition-colors"
+                                >
+                                  {subItem.label}
+                                </Link>
+                              )
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
