@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center space-y-5">
           {/* Official Conference Logo Banner Presentation */}
           <div className="flex justify-center mb-2">
-            <div className="bg-white px-6 py-5 sm:px-10 sm:py-7 rounded-3xl border border-slate-200/90 shadow-lg max-w-xl sm:max-w-3xl lg:max-w-4xl w-full flex items-center justify-center">
+            <div className="bg-white px-6 py-4 sm:px-8 sm:py-5 rounded-3xl border border-slate-200/90 shadow-md max-w-lg sm:max-w-2xl lg:max-w-3xl w-full flex items-center justify-center">
               <img
                 src={CONFERENCE_INFO.logoUrl}
                 alt="2nd International Biotechnology Conference 2027"
@@ -40,7 +40,7 @@ export const Hero: React.FC = () => {
                     e.currentTarget.src = CONFERENCE_INFO.logoFallbackUrl;
                   }
                 }}
-                className="w-full h-auto max-h-48 sm:max-h-64 md:max-h-72 lg:max-h-80 object-contain"
+                className="w-full h-auto max-h-40 sm:max-h-52 md:max-h-60 object-contain"
               />
             </div>
           </div>
