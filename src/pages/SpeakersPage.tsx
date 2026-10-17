@@ -1,27 +1,8 @@
-import React, { useState } from 'react';
-import { Users, Search, Sparkles, Filter, Building2, MapPin, ArrowRight, BookOpen } from 'lucide-react';
-import { SPEAKERS, FEATURED_KEYNOTE_SPEAKER, Speaker } from '../data/conferenceData';
-import { SpeakerCard } from '../components/SpeakerCard';
-import { SpeakerModal } from '../components/SpeakerModal';
+import React from 'react';
+import { Users, Sparkles } from 'lucide-react';
 import { FeaturedSpeaker } from '../components/FeaturedSpeaker';
 
 export const SpeakersPage: React.FC = () => {
-  const [search, setSearch] = useState('');
-  const [filterType, setFilterType] = useState('All');
-  const [selectedSpeaker, setSelectedSpeaker] = useState<Speaker | null>(null);
-
-  const allSpeakers = [FEATURED_KEYNOTE_SPEAKER, ...SPEAKERS];
-
-  const filteredSpeakers = allSpeakers.filter((sp) => {
-    const matchesFilter = filterType === 'All' || sp.sessionType === filterType;
-    const matchesSearch =
-      sp.name.toLowerCase().includes(search.toLowerCase()) ||
-      sp.institution.toLowerCase().includes(search.toLowerCase()) ||
-      sp.researchArea.toLowerCase().includes(search.toLowerCase()) ||
-      sp.country.toLowerCase().includes(search.toLowerCase());
-    return matchesFilter && matchesSearch;
-  });
-
   return (
     <div className="py-12 bg-white">
       {/* Header Banner */}
@@ -44,65 +25,49 @@ export const SpeakersPage: React.FC = () => {
         {/* Featured Keynote Card */}
         <FeaturedSpeaker />
 
-        {/* Filter and Search Bar */}
-        <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="flex items-center gap-1.5 p-1 bg-slate-100 rounded-lg border border-slate-200 overflow-x-auto">
-            {['All', 'Keynote', 'Plenary', 'Invited'].map((type) => (
-              <button
-                key={type}
-                type="button"
-                onClick={() => setFilterType(type)}
-                className={`px-4 py-2 text-xs font-semibold rounded-md transition-colors whitespace-nowrap ${
-                  filterType === type
-                    ? 'bg-white text-emerald-800 shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                {type}
-              </button>
-            ))}
-          </div>
+        {/* Invited Speakers & Panellists: Photo Frames with 'Updating Soon' */}
+        <div className="pt-8 border-t border-slate-200">
+          <div className="rounded-2xl bg-slate-50 border border-slate-200/90 p-8 sm:p-14 text-center space-y-8">
+            <div className="max-w-xl mx-auto space-y-2">
+              <div className="text-xs font-bold text-emerald-800 uppercase tracking-widest">
+                Invited Speakers &amp; Panelists
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                Thematic &amp; Parallel Session Speakers
+              </h2>
+            </div>
 
-          <div className="w-full md:w-80 relative">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              placeholder="Search speaker, institution, topic..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 text-sm bg-slate-50 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-white"
-            />
+            {/* 3 Placeholder Photo Frames in a neat row */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              {[1, 2, 3].map((idx) => (
+                <div key={idx} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs flex flex-col items-center space-y-3">
+                  <div className="w-28 h-28 rounded-2xl bg-slate-100 border-2 border-dashed border-slate-300 flex items-center justify-center text-slate-400">
+                    <Users className="w-10 h-10 text-slate-300" />
+                  </div>
+                  <div className="w-full space-y-1">
+                    <div className="h-3.5 bg-slate-200/80 rounded-md w-3/4 mx-auto animate-pulse" />
+                    <div className="h-2.5 bg-slate-100 rounded-md w-1/2 mx-auto" />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Prominent Updating Soon Banner */}
+            <div className="space-y-2 pt-2 max-w-md mx-auto">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100/70 text-emerald-900 border border-emerald-200 text-xs font-semibold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
+                <span>Invited Scholars Announcement</span>
+              </div>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
+                Updating Soon
+              </h3>
+              <p className="text-sm text-slate-600">
+                The complete directory of plenary orators, session chairs, and invited symposium speakers will be published here.
+              </p>
+            </div>
           </div>
         </div>
-
-        {/* Speakers Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
-          {filteredSpeakers.map((speaker) => (
-            <SpeakerCard
-              key={speaker.id}
-              speaker={speaker}
-              onSelect={(sp) => setSelectedSpeaker(sp)}
-            />
-          ))}
-        </div>
-
-        {filteredSpeakers.length === 0 && (
-          <div className="text-center py-16 bg-slate-50 rounded-xl border border-slate-200">
-            <p className="text-slate-600 text-sm">No speakers match your search criteria.</p>
-            <button
-              onClick={() => {
-                setSearch('');
-                setFilterType('All');
-              }}
-              className="mt-2 text-sm text-emerald-700 font-semibold hover:underline"
-            >
-              Reset filters
-            </button>
-          </div>
-        )}
       </div>
-
-      <SpeakerModal speaker={selectedSpeaker} onClose={() => setSelectedSpeaker(null)} />
     </div>
   );
 };
