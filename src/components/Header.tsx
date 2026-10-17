@@ -103,7 +103,6 @@ export const Header: React.FC = () => {
       items: [
         { label: 'Registration Fees', path: '/register#fees' },
         { label: 'Bank Payment & Bangla QR', path: '/register#payment' },
-        { label: 'Register Online', path: '/register' },
       ],
     },
     {
@@ -298,13 +297,13 @@ export const Header: React.FC = () => {
               {/* Mobile Registration */}
               <div className="space-y-1 pl-3 border-l-2 border-teal-600">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400 py-1">Registration</div>
-                <Link to="/register#fees" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Registration Fees</Link>
-                <Link to="/register#payment" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Bank Payment &amp; Bangla QR</Link>
-                <Link to="/register" className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Register Online</Link>
+                <Link to="/register#fees" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Registration Fees</Link>
+                <Link to="/register#payment" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Bank Payment &amp; Bangla QR</Link>
               </div>
 
               <Link
                 to="/contact"
+                onClick={() => setMobileMenuOpen(false)}
                 className="block px-3 py-2 rounded-md text-sm font-semibold text-slate-800 hover:bg-slate-50"
               >
                 Contact
@@ -312,20 +311,14 @@ export const Header: React.FC = () => {
 
               <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
                 <a
-                  href="https://forms.gle/RzeqcFCeakhUFMVF8"
+                  href={CONFERENCE_INFO.abstractPortalUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-1.5 py-2.5 px-4 text-xs font-bold text-white bg-slate-900 rounded-lg shadow-xs"
                 >
-                  <span>Submit Paper</span>
+                  <span>Submit Abstract</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
-                <Link
-                  to="/register"
-                  className="w-full flex items-center justify-center py-2 px-4 text-xs font-semibold text-emerald-800 bg-emerald-50 rounded-lg border border-emerald-200"
-                >
-                  Register Online
-                </Link>
               </div>
             </div>
           </div>
