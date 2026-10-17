@@ -51,15 +51,22 @@ export const AboutPage: React.FC = () => {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white p-6 sm:p-8 flex flex-col items-center justify-center text-center">
-              <img
-                src="/images/conference-logo.svg"
-                alt="Official International Biotechnology Conference 2027 Logo"
-                className="w-full max-h-48 object-contain my-2"
-              />
-              <div className="mt-4 pt-4 border-t border-slate-100 w-full flex items-center justify-between text-xs text-slate-500">
-                <span className="font-semibold text-emerald-800">Official Brand Identity</span>
-                <span>IBC 2027 · CU Campus</span>
+            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white">
+              <div className="p-6 sm:p-8 flex items-center justify-center bg-white min-h-[220px]">
+                <img
+                  src="/images/custom-logo.jpeg"
+                  alt="International Biotechnology Conference 2027 Official Logo"
+                  onError={(e) => {
+                    if (e.currentTarget.src !== "https://i.ibb.co/YSk3nmW/NBC-Logo.jpg") {
+                      e.currentTarget.src = "https://i.ibb.co/YSk3nmW/NBC-Logo.jpg";
+                    }
+                  }}
+                  className="w-full h-auto max-h-56 object-contain"
+                />
+              </div>
+              <div className="p-4 bg-slate-900 text-white text-xs">
+                <span className="font-semibold text-emerald-300">Official Brand Identity: IBC 2027</span>
+                <p className="text-slate-300 mt-1">Organized by Dept. of GEB, Faculty of Biological Sciences, University of Chittagong.</p>
               </div>
             </div>
           </div>
