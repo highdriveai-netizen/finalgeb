@@ -30,9 +30,12 @@ export const Hero: React.FC = () => {
         {/* Main Hero Conference Identity */}
         <div className="max-w-4xl mx-auto text-center space-y-4">
           {/* Department Presentation Tagline */}
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-xs sm:text-sm md:text-base font-semibold tracking-wide text-emerald-900 bg-emerald-50/80 border border-emerald-200/80 px-4 py-1.5 rounded-full shadow-2xs">
-              Department of Genetic Engineering &amp; Biotechnology, University of Chittagong presents
+          <div className="flex flex-col items-center justify-center gap-1">
+            <span className="text-xs sm:text-sm md:text-base font-semibold tracking-wide text-slate-800">
+              Department of Genetic Engineering &amp; Biotechnology, University of Chittagong
+            </span>
+            <span className="text-xs sm:text-sm font-serif italic text-emerald-800 tracking-wider font-semibold">
+              presents
             </span>
           </div>
 
