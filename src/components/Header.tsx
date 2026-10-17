@@ -71,7 +71,6 @@ export const Header: React.FC = () => {
         { label: 'About Conference', path: '/about#conference' },
         { label: 'About GEB Department', path: '/about#department' },
         { label: 'Organizing Committee', path: '/about#committee' },
-        { label: 'Host University (CU)', path: '/about#university' },
       ],
     },
     {
