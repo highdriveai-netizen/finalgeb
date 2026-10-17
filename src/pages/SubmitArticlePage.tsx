@@ -38,38 +38,6 @@ export const SubmitArticlePage: React.FC = () => {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-10">
-        {/* Primary Call to Action Card with Submit Abstract Button */}
-        <div className="bg-white rounded-3xl border border-slate-200/90 shadow-lg p-8 sm:p-14 text-center space-y-6">
-          <div className="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-800 mx-auto flex items-center justify-center shadow-2xs">
-            <FileText className="w-8 h-8 text-emerald-700" />
-          </div>
-
-          <div className="space-y-2 max-w-xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Submit Your Conference Abstract
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              Click the button below to open the official IBC 2027 Abstract Submission form on Google Forms and complete your submission.
-            </p>
-          </div>
-
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfrR7_Dbb-RqUJPXGyZGl9cNx5nsgO3x44ExruFNaAouVKr0g/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-emerald-700 hover:bg-emerald-800 active:bg-emerald-900 text-white text-base sm:text-lg font-bold rounded-xl shadow-md transition-all duration-200 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2"
-            >
-              <span>Submit Abstract</span>
-              <ExternalLink className="w-5 h-5" />
-            </a>
-          </div>
-
-          <div className="pt-4 border-t border-slate-100 max-w-md mx-auto text-xs text-slate-500">
-            <span>Deadline: <strong>15 November 2026</strong> · Free of charge</span>
-          </div>
-        </div>
-
         {/* Submission Guideline Section */}
         <div id="guidelines" className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 sm:p-10 space-y-6">
           <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
@@ -135,6 +103,38 @@ export const SubmitArticlePage: React.FC = () => {
             <div className="leading-relaxed">
               <strong>Individual Registration Requirement:</strong> Each author of the accepted abstracts must register individually (if more than one author of the paper wants to join the conference).
             </div>
+          </div>
+        </div>
+
+        {/* Primary Call to Action Card with Submit Abstract Button */}
+        <div className="bg-white rounded-3xl border border-slate-200/90 shadow-lg p-8 sm:p-14 text-center space-y-6">
+          <div className="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-800 mx-auto flex items-center justify-center shadow-2xs">
+            <FileText className="w-8 h-8 text-emerald-700" />
+          </div>
+
+          <div className="space-y-2 max-w-xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Submit Your Conference Abstract
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Click the button below to open the official IBC 2027 Abstract Submission form on Google Forms and complete your submission.
+            </p>
+          </div>
+
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfrR7_Dbb-RqUJPXGyZGl9cNx5nsgO3x44ExruFNaAouVKr0g/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-emerald-700 hover:bg-emerald-800 active:bg-emerald-900 text-white text-base sm:text-lg font-bold rounded-xl shadow-md transition-all duration-200 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2"
+            >
+              <span>Submit Abstract</span>
+              <ExternalLink className="w-5 h-5" />
+            </a>
+          </div>
+
+          <div className="pt-4 border-t border-slate-100 max-w-md mx-auto text-xs text-slate-500">
+            <span>Deadline: <strong>15 November 2026</strong> · Free of charge</span>
           </div>
         </div>
 
