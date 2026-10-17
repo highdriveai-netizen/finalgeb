@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Building2, Dna, GraduationCap, Award, Globe, Users, CheckCircle2, ArrowRight } from 'lucide-react';
-import { Organizer } from '../components/Organizer';
 
 export const AboutPage: React.FC = () => {
   return (
@@ -129,9 +128,6 @@ export const AboutPage: React.FC = () => {
             </p>
           </div>
         </div>
-
-        {/* Organizer Component */}
-        <Organizer />
 
         {/* Call to Action */}
         <div className="text-center bg-emerald-900 text-white rounded-2xl p-8 sm:p-12 space-y-4">
