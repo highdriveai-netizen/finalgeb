@@ -104,6 +104,8 @@ export const CONFERENCE_INFO = {
   abstractPortalUrl: "https://forms.gle/RzeqcFCeakhUFMVF8",
   logoUrl: "/images/custom-logo.jpeg",
   logoFallbackUrl: "https://i.ibb.co/YSk3nmW/NBC-Logo.jpg",
+  iconUrl: "/images/conference-icon.jpg",
+  iconFallbackUrl: "https://i.ibb.co/XrjSMBrM/NBC-icon.jpg",
   contactEmail: "ibc2027@cu.ac.bd",
   departmentEmail: "geb@cu.ac.bd",
   departmentPortal: "https://cu.ac.bd/dgeb/",
