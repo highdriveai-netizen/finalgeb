@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 460" fill="none">
+  <defs>
+    <linearGradient id="iconLeafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#16a34a" />
+      <stop offset="60%" stop-color="#4ade80" />
+      <stop offset="100%" stop-color="#86efac" />
+    </linearGradient>
+
+    <linearGradient id="iconDnaTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e7490" />
+      <stop offset="50%" stop-color="#0891b2" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <linearGradient id="iconDnaRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#be123c" />
+      <stop offset="50%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#9f1239" />
+    </linearGradient>
+
+    <linearGradient id="iconArcTeal" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="60%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+
+    <linearGradient id="iconRedAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#991b1b" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(5, 10)">
+    <!-- Outer Circular Bio-Network Orbit -->
+    <path d="M 140 400 C 60 360 20 280 20 200 C 20 120 70 50 140 20 C 120 40 80 100 80 180 C 80 250 110 320 140 400 Z" 
+          fill="url(#iconArcTeal)" opacity="0.85" />
+
+    <path d="M 140 380 C 70 340 35 270 35 190 C 35 110 90 40 150 15" 
+          stroke="#0d9488" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.9" />
+
+    <!-- Bar Chart Graphic Elements -->
+    <rect x="55" y="290" width="8" height="35" rx="2" fill="#14b8a6" opacity="0.8" />
+    <rect x="68" y="270" width="8" height="55" rx="2" fill="#0d9488" opacity="0.85" />
+    <rect x="81" y="250" width="8" height="75" rx="2" fill="#0f766e" opacity="0.9" />
+    <rect x="94" y="235" width="8" height="90" rx="2" fill="#115e59" opacity="0.95" />
+
+    <!-- Molecular Network Nodes & Connecting Bonds -->
+    <line x1="38" y1="200" x2="60" y2="160" stroke="#1e293b" stroke-width="2.5" />
+    <line x1="60" y1="160" x2="90" y2="150" stroke="#1e293b" stroke-width="2.5" />
+    <line x1="60" y1="160" x2="45" y2="250" stroke="#1e293b" stroke-width="2" />
+    <line x1="90" y1="150" x2="115" y2="195" stroke="#1e293b" stroke-width="2.5" />
+    <line x1="90" y1="150" x2="95" y2="90" stroke="#1e293b" stroke-width="2" />
+
+    <circle cx="38" cy="200" r="8" fill="#0284c7" />
+    <circle cx="60" cy="160" r="9" fill="#0f766e" />
+    <circle cx="90" cy="150" r="9.5" fill="#1e293b" />
+    <circle cx="115" cy="195" r="8.5" fill="#0d9488" />
+    <circle cx="45" cy="250" r="8" fill="url(#iconRedAccent)" />
+    <circle cx="95" cy="90" r="8" fill="url(#iconRedAccent)" />
+
+    <circle cx="130" cy="115" r="5" fill="#10b981" />
+    <circle cx="132" cy="290" r="7" fill="#14b8a6" />
+
+    <path d="M 140 130 C 155 170 155 260 120 340 C 135 300 142 220 130 160 Z" 
+          fill="url(#iconDnaRed)" opacity="0.8" />
+
+    <!-- DNA Base Pairs (Rungs) -->
+    <g stroke="#334155" stroke-width="3" stroke-linecap="round" opacity="0.75">
+      <line x1="102" y1="150" x2="130" y2="158" />
+      <line x1="104" y1="168" x2="128" y2="174" />
+      <line x1="106" y1="186" x2="124" y2="190" />
+      
+      <line x1="104" y1="230" x2="128" y2="224" />
+      <line x1="100" y1="248" x2="132" y2="242" />
+      <line x1="96" y1="266" x2="136" y2="260" />
+      <line x1="98" y1="284" x2="132" y2="280" />
+      <line x1="102" y1="302" x2="126" y2="300" />
+      
+      <line x1="105" y1="340" x2="125" y2="336" />
+      <line x1="108" y1="356" x2="122" y2="352" />
+    </g>
+
+    <!-- DNA Strand 1: Red Ribbon -->
+    <path d="M 108 80 C 120 120 138 180 100 220 C 70 250 78 300 122 350 C 130 360 135 375 130 395 C 135 380 130 365 115 348 C 85 315 76 270 102 230 C 135 190 125 130 108 80 Z" 
+          fill="url(#iconDnaRed)" />
+
+    <!-- DNA Strand 2: Blue-Teal Ribbon -->
+    <path d="M 112 85 C 98 130 80 185 118 225 C 145 255 140 310 98 360 C 110 390 120 420 125 435 C 120 410 110 380 106 350 C 135 300 130 250 110 215 C 80 175 95 125 112 85 Z" 
+          fill="url(#iconDnaTeal)" />
+
+    <!-- Top Sprouting Green Leaves -->
+    <path d="M 108 80 C 102 50 106 20 132 0 C 136 28 128 62 108 80 Z" 
+          fill="url(#iconLeafGrad)" />
+    <path d="M 110 75 Q 120 40 130 5" 
+          stroke="#15803d" stroke-width="1.5" fill="none" opacity="0.6" />
+
+    <path d="M 103 82 C 90 70 78 65 72 52 C 86 52 100 66 103 82 Z" 
+          fill="url(#iconLeafGrad)" />
+    <path d="M 101 80 Q 90 68 76 56" 
+          stroke="#15803d" stroke-width="1.2" fill="none" opacity="0.6" />
+  </g>
+</svg>

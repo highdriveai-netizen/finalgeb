@@ -36,17 +36,26 @@ export const SubmitArticlePage: React.FC = () => {
     <div className="py-10 bg-slate-50 min-h-screen">
       {/* Banner */}
       <div className="bg-gradient-to-r from-[#044e3b] via-[#065f46] to-[#0f766e] text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-emerald-200 text-xs font-semibold uppercase tracking-wider">
-            <FileUp className="w-3.5 h-3.5 text-emerald-300" />
-            <span>Call for Abstracts · IBC 2027</span>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="space-y-3 max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-emerald-200 text-xs font-semibold uppercase tracking-wider">
+              <FileUp className="w-3.5 h-3.5 text-emerald-300" />
+              <span>Call for Abstracts · IBC 2027</span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+              Submit Abstract
+            </h1>
+            <p className="text-emerald-100 text-xs sm:text-sm md:text-base leading-relaxed">
+              “Biotechnology for sustainable development.” Welcome to the official manuscript abstract submission portal for the International Biotechnology Conference 2027, organized by the Department of Genetic Engineering &amp; Biotechnology (GEB), University of Chittagong.
+            </p>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Submit Abstract
-          </h1>
-          <p className="text-emerald-100 max-w-3xl text-xs sm:text-sm md:text-base leading-relaxed">
-            “Biotechnology for sustainable development.” Welcome to the official manuscript abstract submission portal for the International Biotechnology Conference 2027, organized by the Department of Genetic Engineering &amp; Biotechnology (GEB), University of Chittagong.
-          </p>
+          <div className="hidden md:flex shrink-0 p-4 bg-white rounded-2xl shadow-lg border border-white/20 max-w-xs">
+            <img
+              src="/images/conference-logo.svg"
+              alt="International Biotechnology Conference 2027 Logo"
+              className="w-full h-auto object-contain max-h-24"
+            />
+          </div>
         </div>
       </div>
 

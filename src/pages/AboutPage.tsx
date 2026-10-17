@@ -51,15 +51,15 @@ export const AboutPage: React.FC = () => {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-white p-6 sm:p-8 flex flex-col items-center justify-center text-center">
               <img
-                src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80"
-                alt="Biotechnology researchers evaluating laboratory assays"
-                className="w-full h-72 object-cover"
+                src="/images/conference-logo.svg"
+                alt="Official International Biotechnology Conference 2027 Logo"
+                className="w-full max-h-48 object-contain my-2"
               />
-              <div className="p-4 bg-slate-900 text-white text-xs">
-                <span className="font-semibold text-emerald-300">Archive Reference: NBC 2023 Series</span>
-                <p className="text-slate-300 mt-1">Conducted at the Faculty of Biological Sciences, University of Chittagong.</p>
+              <div className="mt-4 pt-4 border-t border-slate-100 w-full flex items-center justify-between text-xs text-slate-500">
+                <span className="font-semibold text-emerald-800">Official Brand Identity</span>
+                <span>IBC 2027 · CU Campus</span>
               </div>
             </div>
           </div>

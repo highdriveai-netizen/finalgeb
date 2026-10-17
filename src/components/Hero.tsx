@@ -27,8 +27,19 @@ export const Hero: React.FC = () => {
           </Link>
         </div>
 
-        {/* Main Hero Typography */}
+        {/* Main Hero Conference Identity */}
         <div className="max-w-4xl mx-auto text-center space-y-5">
+          {/* Official Conference Logo Banner Presentation */}
+          <div className="flex justify-center mb-2">
+            <div className="bg-white/90 backdrop-blur-xs px-6 py-4 rounded-2xl border border-slate-200/90 shadow-sm max-w-xl w-full flex items-center justify-center">
+              <img
+                src="/images/conference-logo.svg"
+                alt="International Biotechnology Conference 2027 Official Logo"
+                className="w-full max-h-24 sm:max-h-28 object-contain"
+              />
+            </div>
+          </div>
+
           <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-emerald-800 flex items-center justify-center gap-2">
             <span className="w-6 h-0.5 bg-emerald-600 inline-block" />
             <span>2ND INTERNATIONAL BIOTECHNOLOGY CONFERENCE 2027</span>
