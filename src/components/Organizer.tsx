@@ -4,23 +4,23 @@ import { CONFERENCE_INFO } from '../data/conferenceData';
 
 export const Organizer: React.FC = () => {
   return (
-    <section id="organizer" className="pt-12 pb-8 sm:pt-16 sm:pb-10 bg-slate-50/80 border-b border-slate-200">
+    <section id="organizer" className="py-6 sm:py-8 bg-slate-50/80 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-8">
-          <div className="mb-2">
+        <div className="max-w-3xl mb-4">
+          <div className="mb-1.5">
             <span className="font-mono text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">
-              05 / HOST &amp; LEADERSHIP
+              05 / HOST
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             About GEB
           </h2>
         </div>
 
         {/* Institutional Host Card */}
-        <div className="w-full bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 space-y-6 shadow-xs">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 pb-6 border-b border-slate-200">
-            <div className="w-20 h-20 rounded-2xl bg-white border border-slate-200 p-2 shrink-0 shadow-xs flex items-center justify-center">
+        <div className="w-full bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 space-y-4 shadow-xs">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pb-4 border-b border-slate-200">
+            <div className="w-16 h-16 rounded-xl bg-white border border-slate-200 p-1.5 shrink-0 shadow-xs flex items-center justify-center">
               <img
                 src="/images/cu-logo.png"
                 alt="University of Chittagong"

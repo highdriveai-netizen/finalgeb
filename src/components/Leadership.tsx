@@ -67,8 +67,8 @@ export const Leadership: React.FC = () => {
   };
 
   return (
-    <section id="leadership" className="py-14 sm:py-20 bg-white border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section id="leadership" className="py-10 sm:py-14 bg-white border-b border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         {/* Section Header */}
         <div className="max-w-3xl">
           <div className="mb-2">
