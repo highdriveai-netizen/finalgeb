@@ -44,9 +44,6 @@ export const ConferenceThemes: React.FC = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
               9 Conference Tracks &amp; Thematic Areas
             </h2>
-            <p className="mt-1.5 text-xs sm:text-sm text-slate-600 max-w-2xl">
-              Spanning modern biotechnology from fundamental genomics and bioinformatics to translational medicine and climate resilience.
-            </p>
           </div>
 
           <Link
