@@ -99,19 +99,12 @@ export const ConferenceThemes: React.FC = () => {
 
                   {/* Title */}
                   <h3
-                    className={`text-sm sm:text-base font-bold leading-snug transition-colors mb-2 ${
+                    className={`text-sm sm:text-base font-bold leading-snug transition-colors ${
                       isHovered ? 'text-emerald-900' : 'text-slate-900'
                     }`}
                   >
                     {theme.title}
                   </h3>
-
-                  {/* Short Description */}
-                  {theme.description && (
-                    <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
-                      {theme.description}
-                    </p>
-                  )}
                 </div>
 
                 {/* Card Action Link */}
