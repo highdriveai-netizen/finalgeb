@@ -67,10 +67,10 @@ export const ConferenceThemes: React.FC = () => {
                 to="/submit-article"
                 onMouseEnter={() => setHoveredId(theme.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className={`group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border transition-all duration-200 ${
+                className={`group flex flex-col justify-between p-4 sm:p-5 rounded-2xl border-2 transition-all duration-200 ${
                   isHovered
-                    ? 'bg-white border-emerald-400 shadow-md -translate-y-1'
-                    : 'bg-white/90 border-slate-200/90 shadow-2xs hover:border-slate-300'
+                    ? 'bg-white border-emerald-600 shadow-md ring-4 ring-emerald-50 -translate-y-1'
+                    : 'bg-white border-emerald-800/25 hover:border-emerald-600 shadow-xs'
                 }`}
               >
                 <div>
