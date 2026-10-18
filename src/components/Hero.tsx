@@ -69,7 +69,7 @@ export const Hero: React.FC = () => {
               href="#themes"
               className="group inline-flex items-center gap-2 px-5 py-3 text-xs sm:text-sm font-semibold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 rounded-lg transition-all duration-200"
             >
-              <span>Explore 8 themes</span>
+              <span>Explore 9 themes</span>
               <ArrowDownRight className="w-4 h-4 text-slate-400 group-hover:translate-y-0.5 transition-transform" />
             </a>
           </div>

@@ -160,57 +160,57 @@ export const CONFERENCE_INFO = {
 };
 
 /**
- * 8 OFFICIAL RESEARCH AREAS (From IBC 2027 Document)
+ * 9 OFFICIAL RESEARCH AREAS (From IBC 2027 Document)
  */
 export const CONFERENCE_THEMES: ConferenceTheme[] = [
   {
     id: "theme-1",
     number: "01",
+    title: "Antimicrobial Resistance & Microbial Biotechnology",
+    description: "AMR surveillance, extremophiles, microbial synthetic biology, and therapeutic microbiome interventions.",
+    iconName: "Microscope",
+  },
+  {
+    id: "theme-2",
+    number: "02",
     title: "Animal, Fisheries & Marine Biotechnology",
     description: "Marine genomics, aquaculture disease resistance, marine bioprospecting, and blue biotechnology.",
     iconName: "Fish",
   },
   {
-    id: "theme-2",
-    number: "02",
-    title: "Bioinformatics, Systems & Computational Biology",
-    description: "Genomic sequence pipelines, structural modeling, machine learning in life sciences, and multi-omics.",
-    iconName: "Cpu",
-  },
-  {
     id: "theme-3",
     number: "03",
-    title: "Biotechnology for Renewable Energy",
-    description: "Biofuels, algal bioprocesses, microbial fuel cells, anaerobic digestion, and biomass valorization.",
-    iconName: "Zap",
-  },
-  {
-    id: "theme-4",
-    number: "04",
-    title: "Environmental Biotechnology & Climate Change",
-    description: "Bioremediation, wastewater treatment, carbon sequestration bio-pathways, and ecosystem restoration.",
-    iconName: "Leaf",
-  },
-  {
-    id: "theme-5",
-    number: "05",
-    title: "Industrial & Food Biotechnology",
-    description: "Enzyme engineering, fermentation technology, bioplastics, functional foods, and nutritional security.",
-    iconName: "Factory",
-  },
-  {
-    id: "theme-6",
-    number: "06",
     title: "Medical & Pharmaceutical Biotechnology",
     description: "Biologics, drug discovery, cancer therapeutics, molecular diagnostics, and targeted nanomedicine.",
     iconName: "Stethoscope",
   },
   {
+    id: "theme-4",
+    number: "04",
+    title: "Bioinformatics, Systems & Computational Biology",
+    description: "Genomic sequence pipelines, structural modeling, machine learning in life sciences, and multi-omics.",
+    iconName: "Cpu",
+  },
+  {
+    id: "theme-5",
+    number: "05",
+    title: "Biotechnology for Renewable Energy",
+    description: "Biofuels, algal bioprocesses, microbial fuel cells, anaerobic digestion, and biomass valorization.",
+    iconName: "Zap",
+  },
+  {
+    id: "theme-6",
+    number: "06",
+    title: "Environmental Biotechnology & Climate Change",
+    description: "Bioremediation, wastewater treatment, carbon sequestration bio-pathways, and ecosystem restoration.",
+    iconName: "Leaf",
+  },
+  {
     id: "theme-7",
     number: "07",
-    title: "Microbial Biotechnology & Antimicrobial Resistance",
-    description: "AMR surveillance, extremophiles, microbial synthetic biology, and therapeutic microbiome interventions.",
-    iconName: "Microscope",
+    title: "Industrial & Food Biotechnology",
+    description: "Enzyme engineering, fermentation technology, bioplastics, functional foods, and nutritional security.",
+    iconName: "Factory",
   },
   {
     id: "theme-8",
@@ -218,6 +218,13 @@ export const CONFERENCE_THEMES: ConferenceTheme[] = [
     title: "Plant & Agricultural Biotechnology",
     description: "Crop genetics, climate-resilient stress tolerance, tissue culture, and modern molecular breeding.",
     iconName: "Sprout",
+  },
+  {
+    id: "theme-9",
+    number: "09",
+    title: "Nanobiotechnology & Neurobiology",
+    description: "Nanomaterials, targeted drug nano-carriers, neural stem cells, neurodegenerative mechanisms, and molecular neurobiology.",
+    iconName: "Activity",
   },
 ];
 

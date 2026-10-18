@@ -79,7 +79,7 @@ export const Header: React.FC = () => {
       hasDropdown: true,
       items: [
         { label: 'Conference Agenda', path: '/agenda' },
-        { label: '8 Research Areas', path: '/#themes' },
+        { label: '9 Research Areas', path: '/#themes' },
         { label: '5 Key Events', path: '/about#events' },
       ],
     },
@@ -275,7 +275,7 @@ export const Header: React.FC = () => {
               <div className="space-y-1 pl-3 border-l-2 border-teal-600">
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400 py-1">Program</div>
                 <Link to="/agenda" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Conference Agenda</Link>
-                <Link to="/#themes" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">8 Research Areas</Link>
+                <Link to="/#themes" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">9 Research Areas</Link>
                 <Link to="/about#events" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">5 Key Events</Link>
               </div>
 
