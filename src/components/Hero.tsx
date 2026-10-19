@@ -41,10 +41,7 @@ export const Hero: React.FC = () => {
 
           {/* Official Conference Logo Banner Presentation */}
           <div className="flex justify-center mb-2">
-            <div className="relative group bg-white px-6 py-4 sm:px-8 sm:py-5 rounded-3xl border border-slate-200/90 shadow-md max-w-lg sm:max-w-2xl lg:max-w-3xl w-full flex items-center justify-center overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-emerald-300">
-              {/* Subtle ambient light aura behind logo */}
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-100/40 via-teal-100/30 to-emerald-100/40 blur-xl pointer-events-none animate-logo-glow" />
-
+            <div className="bg-white px-6 py-4 sm:px-8 sm:py-5 rounded-3xl border border-slate-200/90 shadow-md max-w-lg sm:max-w-2xl lg:max-w-3xl w-full flex items-center justify-center">
               <img
                 src={CONFERENCE_INFO.logoUrl}
                 alt="2nd International Biotechnology Conference 2027"
@@ -53,7 +50,7 @@ export const Hero: React.FC = () => {
                     e.currentTarget.src = CONFERENCE_INFO.logoFallbackUrl;
                   }
                 }}
-                className="relative z-10 w-full h-auto max-h-40 sm:max-h-52 md:max-h-60 object-contain animate-logo-float transition-transform duration-300 hover:scale-[1.03]"
+                className="w-full h-auto max-h-40 sm:max-h-52 md:max-h-60 object-contain"
               />
             </div>
           </div>
