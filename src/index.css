@@ -42,3 +42,34 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #047857;
 }
+
+/* Elegant Academic Logo Floating Animation */
+@keyframes logo-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    filter: drop-shadow(0 4px 6px rgba(15, 118, 110, 0.08));
+  }
+  50% {
+    transform: translateY(-6px) scale(1.012);
+    filter: drop-shadow(0 14px 18px rgba(4, 120, 87, 0.16));
+  }
+}
+
+@keyframes logo-glow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.03);
+  }
+}
+
+.animate-logo-float {
+  animation: logo-float 4.5s ease-in-out infinite;
+}
+
+.animate-logo-glow {
+  animation: logo-glow 4.5s ease-in-out infinite;
+}
