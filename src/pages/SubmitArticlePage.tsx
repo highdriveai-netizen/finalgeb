@@ -11,6 +11,7 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import { CONFERENCE_INFO } from '../data/conferenceData';
+import { OfficialPosterSection } from '../components/OfficialPosterSection';
 
 export const SubmitArticlePage: React.FC = () => {
   const location = useLocation();
@@ -106,6 +107,9 @@ export const SubmitArticlePage: React.FC = () => {
           </div>
         </div>
 
+        {/* Official Conference Circular & Poster */}
+        <OfficialPosterSection />
+
         {/* Primary Call to Action Card with Submit Abstract Button */}
         <div className="bg-white rounded-3xl border border-slate-200/90 shadow-lg p-8 sm:p-14 text-center space-y-6">
           <div className="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-800 mx-auto flex items-center justify-center shadow-2xs">
@@ -123,7 +127,7 @@ export const SubmitArticlePage: React.FC = () => {
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfrR7_Dbb-RqUJPXGyZGl9cNx5nsgO3x44ExruFNaAouVKr0g/viewform"
+              href={CONFERENCE_INFO.abstractPortalUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-emerald-700 hover:bg-emerald-800 active:bg-emerald-900 text-white text-base sm:text-lg font-bold rounded-xl shadow-md transition-all duration-200 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:ring-offset-2"
@@ -134,7 +138,7 @@ export const SubmitArticlePage: React.FC = () => {
           </div>
 
           <div className="pt-4 border-t border-slate-100 max-w-md mx-auto text-xs text-slate-500">
-            <span>Deadline: <strong>15 November 2026</strong> · Free of charge</span>
+            <span>Deadline: <strong>25 November 2026</strong> · Free of charge</span>
           </div>
         </div>
 
@@ -147,7 +151,7 @@ export const SubmitArticlePage: React.FC = () => {
                 Key Deadlines
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Abstract Submission Deadline: <strong>15 November 2026</strong>. Notification of Acceptance: <strong>1 December 2026</strong>. Early Bird Registration: <strong>15 December 2026</strong>.
+                Abstract Submission Deadline: <strong>25 November 2026</strong>. Notification of Acceptance: <strong>05 December 2026</strong>. Registration Deadline: <strong>20 December 2026</strong>.
               </p>
             </div>
           </div>

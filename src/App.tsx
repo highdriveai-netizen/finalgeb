@@ -11,6 +11,7 @@ import { SubmitArticlePage } from './pages/SubmitArticlePage';
 import { ResultsPage } from './pages/ResultsPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { ContactPage } from './pages/ContactPage';
+import { OfficialPosterPage } from './pages/OfficialPosterPage';
 
 // Scroll to top or anchor automatically on route changes
 const ScrollToTop: React.FC = () => {
@@ -64,6 +65,8 @@ export const App: React.FC = () => {
             <Route path="/results" element={<ResultsPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/poster" element={<OfficialPosterPage />} />
+            <Route path="/official-poster" element={<OfficialPosterPage />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </main>

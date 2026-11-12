@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
               NOW OPEN
             </span>
             <span className="text-slate-200 group-hover:text-white transition-colors">
-              Abstract submission deadline: November 15, 2026
+              Abstract submission deadline: November 25, 2026
             </span>
             <ArrowUpRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Link>
@@ -65,13 +65,14 @@ export const Hero: React.FC = () => {
               <ArrowUpRight className="w-4 h-4 text-emerald-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
 
-            <a
-              href="#themes"
-              className="group inline-flex items-center gap-2 px-5 py-3 text-xs sm:text-sm font-semibold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 rounded-lg transition-all duration-200"
+            <Link
+              to="/official-poster"
+              className="group inline-flex items-center gap-2 px-5 py-3 text-xs sm:text-sm font-bold text-slate-800 hover:text-emerald-950 bg-white hover:bg-emerald-50/70 border border-slate-300 hover:border-emerald-600 rounded-lg shadow-2xs transition-all duration-200 hover:scale-[1.02]"
             >
-              <span>Explore 9 themes</span>
-              <ArrowDownRight className="w-4 h-4 text-slate-400 group-hover:translate-y-0.5 transition-transform" />
-            </a>
+              <FileText className="w-4 h-4 text-emerald-700" />
+              <span>Official Poster</span>
+              <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Link>
           </div>
         </div>
 

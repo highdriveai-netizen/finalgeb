@@ -60,8 +60,22 @@ export const Header: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+interface SubNavItem {
+  label: string;
+  path: string;
+  isExternal?: boolean;
+}
+
+interface NavItem {
+  label: string;
+  path?: string;
+  key?: string;
+  hasDropdown?: boolean;
+  items?: SubNavItem[];
+}
+
   // Navigation Items matching the reference website
-  const navigationItems = [
+  const navigationItems: NavItem[] = [
     { label: 'Home', path: '/' },
     {
       label: 'About',
@@ -94,6 +108,7 @@ export const Header: React.FC = () => {
       items: [
         { label: 'Call for Abstracts', path: '/submit-article' },
         { label: 'Submission Guidelines', path: '/submit-article#guidelines' },
+        { label: 'Official Circular Poster', path: '/official-poster' },
       ],
     },
     {
