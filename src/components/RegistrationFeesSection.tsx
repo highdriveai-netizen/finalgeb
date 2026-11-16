@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { CreditCard, CheckCircle2, ArrowUpRight, QrCode, Building, ShieldCheck, Mail, Check } from 'lucide-react';
 import { REGISTRATION_CATEGORIES, CONFERENCE_INFO } from '../data/conferenceData';
 
@@ -14,16 +13,6 @@ export const RegistrationFeesSection: React.FC<RegistrationFeesSectionProps> = (
   onSelectCategory,
   showRegisterLink = true,
 }) => {
-  const handleSelect = (categoryId: string) => {
-    if (onSelectCategory) {
-      onSelectCategory(categoryId);
-      const formEl = document.getElementById('registration-form');
-      if (formEl) {
-        formEl.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
   return (
     <section id="fees" className="py-12 sm:py-16 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,17 +35,12 @@ export const RegistrationFeesSection: React.FC<RegistrationFeesSectionProps> = (
           {showRegisterLink && (
             <div className="flex items-center gap-3 shrink-0">
               <a
-                href="#registration-form"
-                onClick={(e) => {
-                  const formEl = document.getElementById('registration-form');
-                  if (formEl) {
-                    e.preventDefault();
-                    formEl.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
+                href={CONFERENCE_INFO.registrationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-emerald-800 hover:bg-emerald-900 text-white text-xs sm:text-sm font-bold shadow-xs transition-all hover:scale-[1.02]"
               >
-                <span>Complete Form Below</span>
+                <span>Complete Registration Form</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
@@ -71,7 +55,7 @@ export const RegistrationFeesSection: React.FC<RegistrationFeesSectionProps> = (
             return (
               <div
                 key={cat.id}
-                onClick={() => onSelectCategory && handleSelect(cat.id)}
+                onClick={() => onSelectCategory && onSelectCategory(cat.id)}
                 className={`rounded-2xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 cursor-pointer ${
                   isSelected
                     ? 'bg-emerald-950 text-white shadow-xl ring-2 ring-emerald-500 scale-[1.02]'
@@ -144,37 +128,27 @@ export const RegistrationFeesSection: React.FC<RegistrationFeesSectionProps> = (
                 </div>
 
                 <div className="pt-4 border-t border-slate-200/20">
-                  {onSelectCategory ? (
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleSelect(cat.id);
-                      }}
-                      className={`w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${
-                        isSelected
-                          ? 'bg-emerald-400 text-slate-950 font-extrabold'
-                          : isFeatured
-                          ? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold'
-                          : 'bg-white hover:bg-emerald-800 hover:text-white text-slate-900 border border-slate-200 shadow-2xs'
-                      }`}
-                    >
-                      <span>{isSelected ? 'Selected Tier' : 'Select Tier & Fill Form'}</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </button>
-                  ) : (
-                    <Link
-                      to={`/register?category=${cat.id}#registration-form`}
-                      className={`w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${
-                        isFeatured
-                          ? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold'
-                          : 'bg-white hover:bg-emerald-800 hover:text-white text-slate-900 border border-slate-200 shadow-2xs'
-                      }`}
-                    >
-                      <span>Select &amp; Register</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </Link>
-                  )}
+                  <a
+                    href={CONFERENCE_INFO.registrationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (onSelectCategory) {
+                        onSelectCategory(cat.id);
+                      }
+                    }}
+                    className={`w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${
+                      isSelected
+                        ? 'bg-emerald-400 text-slate-950 font-extrabold'
+                        : isFeatured
+                        ? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold'
+                        : 'bg-white hover:bg-emerald-800 hover:text-white text-slate-900 border border-slate-200 shadow-2xs'
+                    }`}
+                  >
+                    <span>{isSelected ? 'Proceed to Registration Form' : 'Register Online'}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
                 </div>
               </div>
             );
@@ -270,23 +244,18 @@ export const RegistrationFeesSection: React.FC<RegistrationFeesSectionProps> = (
                   <span>Proof of Payment Required:</span>
                 </div>
                 <p className="text-[11px] text-slate-600 leading-relaxed">
-                  Please preserve the <strong>Transaction ID (TrxID)</strong> or deposit slip counterfoil. You will need to enter this ID and attach the screenshot/slip in the online registration form below.
+                  Please preserve the <strong>Transaction ID (TrxID)</strong> or deposit slip counterfoil. You will need to enter this ID and attach the screenshot/slip in the online registration form.
                 </p>
               </div>
 
               <div className="pt-2 flex items-center justify-between">
                 <a
-                  href="#registration-form"
-                  onClick={(e) => {
-                    const formEl = document.getElementById('registration-form');
-                    if (formEl) {
-                      e.preventDefault();
-                      formEl.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
+                  href={CONFERENCE_INFO.registrationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-xs font-semibold text-emerald-800 hover:text-emerald-950 inline-flex items-center gap-1"
                 >
-                  <span>Go to Registration Form</span>
+                  <span>Open Registration Form</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
                 <a

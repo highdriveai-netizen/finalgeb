@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Search, CheckCircle2, Clock, AlertTriangle, XCircle, FileText, ArrowRight, Printer, Info, Sparkles } from 'lucide-react';
-import { DEMO_RESULTS, DemoSubmissionResult } from '../data/conferenceData';
+import { DEMO_RESULTS, DemoSubmissionResult, CONFERENCE_INFO } from '../data/conferenceData';
 
 export const ResultsPage: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -290,12 +290,22 @@ export const ResultsPage: React.FC = () => {
                 <strong className="block font-bold">Next Mandatory Step:</strong>
                 <span>Authors of accepted manuscripts must complete individual delegate registration prior to session scheduling.</span>
               </div>
-              <Link
-                to="/register"
-                className="shrink-0 px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-md transition-colors"
-              >
-                Complete Registration
-              </Link>
+              <div className="flex flex-wrap items-center gap-2 shrink-0">
+                <a
+                  href={CONFERENCE_INFO.registrationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold rounded-md transition-colors"
+                >
+                  Registration Form
+                </a>
+                <Link
+                  to="/register"
+                  className="px-4 py-2 bg-white hover:bg-emerald-100 text-emerald-900 border border-emerald-300 font-semibold rounded-md transition-colors"
+                >
+                  Fees &amp; Payment Info
+                </Link>
+              </div>
             </div>
 
             <div className="pt-2 flex justify-end">

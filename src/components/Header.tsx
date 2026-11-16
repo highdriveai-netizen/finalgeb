@@ -118,6 +118,7 @@ interface NavItem {
       items: [
         { label: 'Registration Fees', path: '/register#fees' },
         { label: 'Bank Payment & Bangla QR', path: '/register#payment' },
+        { label: 'Registration Form', path: CONFERENCE_INFO.registrationUrl, isExternal: true },
       ],
     },
     {
@@ -314,6 +315,7 @@ interface NavItem {
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400 py-1">Registration</div>
                 <Link to="/register#fees" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Registration Fees</Link>
                 <Link to="/register#payment" onClick={() => setMobileMenuOpen(false)} className="block text-xs py-1.5 text-slate-700 hover:text-emerald-700 font-medium">Bank Payment &amp; Bangla QR</Link>
+                <a href={CONFERENCE_INFO.registrationUrl} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-1 text-xs py-1.5 text-emerald-700 hover:text-emerald-800 font-semibold"><span>Registration Form</span><ArrowUpRight className="w-3 h-3" /></a>
               </div>
 
               <Link

@@ -316,12 +316,23 @@ export const OfficialPosterPage: React.FC = () => {
                 </div>
               </div>
 
-              <Link
-                to="/register#fees"
-                className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs transition"
-              >
-                <span>View Registration Fees</span>
-              </Link>
+              <div className="space-y-2">
+                <a
+                  href={CONFERENCE_INFO.registrationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs transition shadow-xs"
+                >
+                  <span>Complete Registration Form</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+                <Link
+                  to="/register#fees"
+                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs transition"
+                >
+                  <span>View Registration Fees</span>
+                </Link>
+              </div>
             </div>
 
             {/* Conference Secretariat */}

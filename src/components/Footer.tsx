@@ -100,7 +100,18 @@ export const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   className="text-emerald-400 font-semibold hover:text-emerald-300 transition-colors flex items-center gap-1"
                 >
-                  <span>Google Forms Submission Portal</span>
+                  <span>Abstract Submission Portal</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={CONFERENCE_INFO.registrationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 font-semibold hover:text-emerald-300 transition-colors flex items-center gap-1"
+                >
+                  <span>Delegate Registration Form</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </li>
